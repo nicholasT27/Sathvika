@@ -2,10 +2,10 @@ import WavyFrame from "./WavyFrame";
 
 // Photo files go in public/founder/. Each frame uses a different expression and border colour.
 const frames = [
-  { id: "f1", color: "#0ba0d6", src: "/founder/expression-1.jpg", rot: -6, label: "Founder, smiling" },
-  { id: "f2", color: "#ffe77e", src: "/founder/expression-2.jpg", rot: 4, label: "Founder, laughing" },
-  { id: "f3", color: "#e5362b", src: "/founder/expression-3.jpg", rot: -3, label: "Founder, surprised" },
-  { id: "f4", color: "#f26b2d", src: "/founder/expression-4.jpg", rot: 6, label: "Founder, thinking" },
+  { id: "f1", color: "#0ba0d6", src: "/founder/expression-1.svg", rot: -6, label: "Founder, smiling" },
+  { id: "f2", color: "#ffe77e", src: "/founder/expression-2.svg", rot: 4, label: "Founder, laughing" },
+  { id: "f3", color: "#e5362b", src: "/founder/expression-3.svg", rot: -3, label: "Founder, surprised" },
+  { id: "f4", color: "#f26b2d", src: "/founder/expression-4.svg", rot: 6, label: "Founder, thinking" },
 ];
 
 const ticker = ["Branding", "Performance marketing", "Website design", "Marketing strategy", "Creative", "Content"];

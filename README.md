@@ -16,7 +16,7 @@ npm run lint     # code checks
 ```
 
 ## Adding the real content
-- **Founder photos:** drop four images into `public/founder/` named `expression-1.jpg` … `expression-4.jpg`.
+- **Founder photos:** drop four images into `public/founder/` named `expression-1.jpg` … `expression-4.jpg` (the current fake portraits are the `.svg` files; swap the paths in `src/components/Hero.jsx`).
   Until then, the frames show a placeholder.
 - **Wording:** all text is draft copy written to match the brief. Edit it in `src/components/*.jsx`.
 - **Colours:** change them at the top of `src/app/globals.css` (pink is kept to tiny accents on purpose).
