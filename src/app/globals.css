@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Brand colours taken from the client's Rayo inspiration, with pink used only as a tiny accent. */
+:root {
+  --blue: #0ba0d6;
+  --sky: #bfe3f5;
+  --yellow: #ffe77e;
+  --butter: #fdf5b5;
+  --red: #e5362b;
+  --orange: #f26b2d;
+  --pink: #fc8da1;
+  --ink: #3b1410;
+  --paper: #fff8e1;
+}
+
+@theme inline {
+  --color-blue: var(--blue);
+  --color-sky: var(--sky);
+  --color-yellow: var(--yellow);
+  --color-butter: var(--butter);
+  --color-red: var(--red);
+  --color-orange: var(--orange);
+  --color-pink: var(--pink);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-titan);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+}
+h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 400; letter-spacing: 0.01em; }
+
+/* Thick checkerboard backgrounds (colours set per use with --c1 / --c2). */
+.checks {
+  background-color: var(--c2, #fff);
+  background-image:
+    conic-gradient(var(--c1, var(--orange)) 25%, transparent 0 50%, var(--c1, var(--orange)) 0 75%, transparent 0);
+  background-size: var(--size, 90px) var(--size, 90px);
+}
+.checks-orange { --c1: var(--orange); --c2: #fff; --size: 100px; }
+.checks-blue { --c1: var(--sky); --c2: var(--butter); --size: 100px; }
+
+/* Postage-stamp edge: cream circles are painted over the border to look perforated. */
+.stamp { position: relative; background: var(--c, var(--blue)); padding: 18px; }
+.stamp::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 0, var(--paper) 6px, transparent 6.5px) 0 0 / 22px 12px repeat-x,
+    radial-gradient(circle at 50% 100%, var(--paper) 6px, transparent 6.5px) 0 100% / 22px 12px repeat-x,
+    radial-gradient(circle at 0 50%, var(--paper) 6px, transparent 6.5px) 0 0 / 12px 22px repeat-y,
+    radial-gradient(circle at 100% 50%, var(--paper) 6px, transparent 6.5px) 100% 0 / 12px 22px repeat-y;
+}
+
+/* Scalloped (cloud-like) bottom edge for section tops/bottoms. */
+.scallop-top { position: relative; }
+.scallop-top::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -17px; height: 18px;
+  background: radial-gradient(circle at 20px 18px, var(--fill) 19px, transparent 19.5px) 0 0 / 40px 18px repeat-x;
+}
+
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+.bob { animation: bob 4s ease-in-out infinite; }
+@keyframes steam { 0% { opacity: 0; transform: translateY(6px); } 50% { opacity: 1; } 100% { opacity: 0; transform: translateY(-14px); } }
+.steam { animation: steam 2.4s ease-in-out infinite; }
+@keyframes stampIn { 0% { transform: scale(3) rotate(-20deg); opacity: 0; } 70% { transform: scale(0.95) rotate(-12deg); opacity: 1; } 100% { transform: scale(1) rotate(-12deg); opacity: 1; } }
+.stamp-in { animation: stampIn 0.6s ease-out both; }
+
+.btn {
+  display: inline-block; font-family: var(--font-titan); padding: 0.8rem 1.6rem; border-radius: 999px;
+  border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee, .bob, .steam { animation: none; }
+  html { scroll-behavior: auto; }
+}
