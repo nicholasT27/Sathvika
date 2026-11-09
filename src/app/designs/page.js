@@ -1,13 +1,12 @@
 import Link from "next/link";
 
 const options = [
-  ["/", "Original", "Checks, stamps and the door, now in the soft palette.", "bg-orange"],
+  ["/", "★ Chosen: Clothesline (home page)", "The site as it stands: E2 with all nine sections in the client order.", "bg-sky"],
   ["/designs/framed", "A · Framed Panels", "Thin red frame with chunky rounded panels. Calm and clean.", "bg-blue"],
   ["/designs/scrapbook", "B · Scrapbook", "Soft pink table, tilted cards, cloud blobs and floating tags.", "bg-pink"],
   ["/designs/constructor", "C · Constructor", "Grid paper where visitors build their own campaign.", "bg-yellow"],
   ["/designs/journal", "D · Journal (new)", "Editorial pink page with big words and right-aligned lists.", "bg-sky"],
   ["/designs/polaroid", "E1 · Polaroid Wall", "Taped polaroids and sticky notes. Each section enters differently as you scroll.", "bg-butter"],
-  ["/designs/polaroid-line", "E2 · Clothesline (new)", "Polaroids and cards peg onto a washing line and sway. Different entrance per section.", "bg-sky"],
   ["/designs/polaroid-desk", "E3 · Photo Desk (new)", "Pink desk where photos spill out of a pile, paper strips wipe in and service cards flip.", "bg-pink"],
   ["/designs/bento", "F · Bento (new)", "A mosaic of tiles up top, one per section. Click to jump.", "bg-orange"],
 ];
