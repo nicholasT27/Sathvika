@@ -6,6 +6,7 @@ const options = [
   ["/designs/summit-cascade", "Hero · Cascade (new)", "Calm look. Four founder photos step down a staircase, overlapping and slanted, like the Wayo Girl reference.", "bg-sky"],
   ["/designs/summit-quad", "Hero · Quad (new)", "Bold look. Four pastel squares (blue, mint, pink, yellow), each with a flower-framed photo and a headline card in the middle.", "bg-yellow"],
   ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
+  ["/designs/remote-portal", "Remote · Paper-cut portal, side by side (new)", "The chosen paper-cut portal with the words on the left and the layered arches and door on the right.", "bg-butter"],
   ["/designs/remote-more", "Remote · 3 more styles (new)", "Paper-cut portal, an always-on 24-hour coverage chart, and a knock-knock comic you play by knocking.", "bg-yellow"],
   ["/designs/remote-styles", "Remote · 3 distinct styles (new)", "Same content, completely different looks: illustrated shopfront, blueprint drawing, and a night scene with a glowing door.", "bg-blue"],
   ["/designs/remote-checks", "Remote · Checkered frame variations (new)", "Three takes on the chosen checkered-frame door: sunny, tilted with a starburst, and reversed in blue.", "bg-sky"],
