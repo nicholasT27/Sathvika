@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 const options = [
+  ["/designs/summit-calm", "Summit layout · Calm (new)", "Centred-logo menu, collage hero, ticker, two-tone split panels, pattern borders. Quiet and elegant.", "bg-blue"],
+  ["/designs/summit-bold", "Summit layout · Bold (new)", "Same editorial layout with louder colour, chunky headings and checks.", "bg-yellow"],
   ["/designs/pop", "Style 1 · Sticker Pop (new)", "Same layout, no journal look: thick outlines, hard shadows, slanted ribbons and round stickers.", "bg-orange"],
   ["/designs/postage", "Style 2 · Postage Stamp (new)", "Same layout as an airmail envelope: perforated stamps, ticket stubs, lined letter paper.", "bg-sky"],
   ["/designs/collage", "Style 3 · Wavy Collage (chosen, same as home)", "Chosen design, refined for an agency: clean cards, digital-marketing icons.", "bg-yellow"],
