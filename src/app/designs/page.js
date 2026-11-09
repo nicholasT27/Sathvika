@@ -3,8 +3,8 @@ import Link from "next/link";
 const options = [
   ["/designs/pop", "Style 1 · Sticker Pop (new)", "Same layout, no journal look: thick outlines, hard shadows, slanted ribbons and round stickers.", "bg-orange"],
   ["/designs/postage", "Style 2 · Postage Stamp (new)", "Same layout as an airmail envelope: perforated stamps, ticket stubs, lined letter paper.", "bg-sky"],
-  ["/designs/collage", "Style 3 · Wavy Collage (new)", "Same layout in full-width coloured bands with scalloped edges, clouds and a wavy-framed photo.", "bg-yellow"],
-  ["/", "Home page now: Journal Panels", "The current site: pink backdrop, cream card, one founder photo, all nine sections.", "bg-yellow"],
+  ["/designs/collage", "Style 3 · Wavy Collage (chosen, same as home)", "Chosen design, refined for an agency: clean cards, digital-marketing icons.", "bg-yellow"],
+  ["/", "★ Home page: professional Wavy Collage", "The current site.", "bg-yellow"],
   ["/designs/polaroid-line", "E2 · Clothesline", "Previous pick: pegged polaroids on a washing line.", "bg-sky"],
   ["/designs/framed", "A · Framed Panels", "Thin red frame with chunky rounded panels. Calm and clean.", "bg-blue"],
   ["/designs/scrapbook", "B · Scrapbook", "Soft pink table, tilted cards, cloud blobs and floating tags.", "bg-pink"],

@@ -16,7 +16,7 @@ function wavyPath(bumps, depth) {
 }
 
 // A photo inside a coloured wavy border. If the photo file is missing, Penny stands in until it is added.
-export default function WavyFrame({ id, color, src, label, children, bumps = 10 }) {
+export default function WavyFrame({ id, color, src, label, children, bumps = 10, className = "drop-shadow-[5px_6px_0_rgba(59,20,16,0.9)]" }) {
   const [loaded, setLoaded] = useState(false);
   // Only draw the photo once we know the file really exists.
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function WavyFrame({ id, color, src, label, children, bumps = 10 
   const outer = wavyPath(bumps, 0.045);
   const inner = wavyPath(bumps, 0.045);
   return (
-    <svg viewBox="0 0 100 100" className="w-full h-auto drop-shadow-[5px_6px_0_rgba(59,20,16,0.9)]" role="img" aria-label={label}>
+    <svg viewBox="0 0 100 100" className={`w-full h-auto ${className}`} role="img" aria-label={label}>
       <defs>
         <clipPath id={`clip-${id}`}>
           <path d={inner} transform="translate(50 50) scale(0.8) translate(-50 -50)" />

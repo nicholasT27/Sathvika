@@ -1,157 +1,183 @@
 import Nav from "@/components/Nav";
 import ScrollBar from "@/components/ScrollBar";
 import Reveal from "@/components/Reveal";
+import HeroLayout from "@/components/HeroLayout";
+import WavyFrame from "@/components/WavyFrame";
 import Mascot from "@/components/Mascot";
 import Remote from "@/components/Remote";
 import CriminalsLine from "@/components/CriminalsLine";
 import License from "@/components/License";
 import Contact from "@/components/Contact";
-import { beliefs } from "@/components/Ideology";
+import { Icon } from "@/components/Icons";
 import { rules } from "@/components/Rules";
-import { services, icons } from "@/components/Services";
 
 export const metadata = {
-  title: "Sathvika | Creative Criminals",
-  description: "A creative agency that breaks the boring brief. Branding, performance marketing, websites, strategy and content.",
+  title: "Sathvika | Creative Marketing Agency",
+  description: "Branding, performance marketing, website design, strategy and content for brands that want to be noticed.",
 };
 
 // The founder's photo. Replace this file (or change the path) with the real picture.
 const FOUNDER_PHOTO = "/founder/founder.svg";
 
-const facts = [["Mood", "Caffeinated"], ["Superpower", "Turning vague briefs into bold ideas"], ["Weakness", "Good fonts and filter coffee"]];
-const listItem = "text-2xl sm:text-3xl text-red italic font-semibold";
+const channels = [["seo", "SEO"], ["social", "Social media"], ["ads", "Paid ads"], ["email", "Email"], ["analytics", "Analytics"]];
 
-// The Sathvika website: a pink page holding one cream card, filled with soft rounded panels, like the Rayo reference.
+const beliefs = [
+  ["Boring is the only bad idea.", "We push every brief until it has a clear point of view."],
+  ["Strategy first, sparkle second.", "Every creative choice answers a business goal."],
+  ["Brands are people.", "We give them a voice, values and a personality worth following."],
+  ["Done is good. Delightful is better.", "We ship fast, then keep improving with what the data tells us."],
+];
+
+const services = [
+  { icon: "branding", name: "Branding", tint: "var(--svc1)", line: "Identities that look sharp and sound like you.", points: ["Logo and visual identity", "Brand guidelines", "Tone of voice"] },
+  { icon: "performance", name: "Performance Marketing", tint: "var(--svc2)", line: "Paid campaigns built around measurable growth.", points: ["Paid social and search", "Conversion tracking", "Monthly reporting"] },
+  { icon: "website", name: "Website Designing", tint: "var(--svc3)", line: "Fast, clear websites designed to convert.", points: ["UX and UI design", "Landing pages", "Speed and SEO basics"] },
+  { icon: "strategy", name: "Marketing Strategy", tint: "var(--svc4)", line: "A plan with a point of view and a path to results.", points: ["Audience research", "Positioning", "Channel planning"] },
+  { icon: "creative", name: "Creative", tint: "var(--svc5)", line: "Campaign ideas and assets people stop scrolling for.", points: ["Campaign concepts", "Ad creative", "Social visuals"] },
+  { icon: "content", name: "Content", tint: "var(--svc6)", line: "Content that earns attention and keeps it.", points: ["Social content", "Copywriting", "Video and reels"] },
+];
+
+const card = "bg-paper border border-ink/10 rounded-2xl shadow-[0_10px_30px_rgba(106,58,51,0.08)]";
+const eyebrow = "text-sm font-semibold uppercase tracking-[0.18em] text-red";
+
+// The Sathvika website: calm coloured bands with scalloped edges, clean cards and digital-marketing icons.
 export default function Home() {
-  const panel = "rounded-[1.75rem] overflow-hidden";
   return (
-    <main className="soft bg-sky p-3 pt-24 sm:p-6 sm:pt-28 overflow-x-clip">
+    <main className="soft bg-butter pt-24 overflow-x-clip">
       <Nav /><ScrollBar />
-      <div className="mx-auto max-w-5xl bg-paper border border-red/60 rounded-[2rem] p-3 sm:p-5 space-y-12 sm:space-y-16">
 
-        {/* 1. Founder photo straight away. Layout copies the reference: heading + button on top, paragraph under the heading, tall photo on the right, shorter tile bottom-left. */}
-        <section id="top" className={`${panel} bg-yellow p-5 sm:p-8 grid md:grid-cols-2 md:grid-rows-[auto_auto_1fr] gap-x-4 gap-y-4`}>
-          <Reveal anim="drop" className="md:col-start-1 md:col-span-2 md:row-start-1">
-            <h1 className="text-4xl sm:text-5xl text-red leading-[1.1] md:pr-44">Meet Sathvika, the face<br />behind the chaos</h1>
-          </Reveal>
-          <Reveal anim="drop" delay={0.1} className="md:col-start-2 md:row-start-1 md:justify-self-end md:self-start relative z-10">
-            <a href="#contact" className="btn bg-red text-paper !py-2 !px-5 text-sm">Start a project</a>
-          </Reveal>
-          <Reveal anim="left" className="md:col-start-1 md:row-start-2">
-            <p className="max-w-sm text-sm">A creative agency for brands tired of beige. Bold ideas, real strategy and zero boring decks. Make it truly yours.</p>
-          </Reveal>
-          <Reveal anim="right" className="md:col-start-2 md:row-start-2 md:row-span-2">
-            <div role="img" aria-label="Sathvika, founder of the agency" className="rounded-3xl h-80 md:h-full md:min-h-[26rem] bg-sky bg-cover bg-center" style={{ backgroundImage: `url(${FOUNDER_PHOTO})` }} />
-          </Reveal>
-          <Reveal anim="rise" delay={0.1} className="md:col-start-1 md:row-start-3">
-            <div className="bg-paper rounded-3xl h-64 md:h-full md:min-h-[14rem] grid place-items-center"><Mascot mood="happy" className="h-44 md:h-52 bob" /></div>
-          </Reveal>
-        </section>
-
-        {/* 2. Introduction of the founder */}
-        <section id="founder" className="grid md:grid-cols-2 gap-6 items-center">
-          <Reveal anim="flip">
-            <div className={`${panel} bg-sky p-4`}>
-              <div className="relative bg-paper rounded-[1.5rem] p-3">
-                <div className="rounded-2xl bg-butter h-72 grid place-items-center"><Mascot mood="wink" className="h-56" /></div>
-                <span className="absolute inset-0 grid place-items-center pointer-events-none"><span className="display text-3xl bg-yellow text-red rounded-full px-6 py-2 shadow-sm">Hi, I&apos;m Sathvika</span></span>
-              </div>
+      {/* 1. Founder photo straight away */}
+      <div className="bg-yellow px-5 pt-10 pb-16">
+        <HeroLayout
+          className="mx-auto max-w-6xl"
+          heading={<h1 className="text-4xl sm:text-5xl text-red leading-[1.1] md:pr-52">Meet Sathvika, the creative mind<br />behind brands people remember</h1>}
+          button={<a href="#contact" className="btn bg-red text-paper text-sm !py-2">Start a project</a>}
+          intro={<p className="max-w-sm text-lg">Branding, performance marketing, websites and content for brands that want to be noticed.</p>}
+          photo={
+            <div className="h-full grid place-items-center">
+              <div className="w-full max-w-md"><WavyFrame id="home-founder" color="var(--red)" src={FOUNDER_PHOTO} label="Sathvika, founder of the agency" bumps={12} className="drop-shadow-[0_14px_24px_rgba(106,58,51,0.3)]" /></div>
             </div>
-          </Reveal>
-          <Reveal anim="rise">
-            <div className="text-right space-y-4">
-              <p className="text-lg">I started this agency because brands deserve better than copy-paste creativity. I mix strategy, design and a slightly unreasonable amount of coffee. Small team, big ideas. When you work with us, you work with me.</p>
-              <ul className="space-y-2">
-                {facts.map(([k, v]) => <li key={k} className="text-lg"><span className="display text-red">{k}:</span> <span className="italic">{v}</span></li>)}
-              </ul>
+          }
+          tile={
+            <div className="bg-paper rounded-3xl h-64 md:h-full md:min-h-[14rem] grid place-items-center text-center p-4">
+              <div><Mascot mood="happy" className="h-40 md:h-44 mx-auto" /><p className="mt-2 text-sm font-semibold">Penny, our chief idea officer</p></div>
             </div>
-          </Reveal>
-        </section>
-
-        {/* 3. Our ideology */}
-        <section id="ideology" className="grid md:grid-cols-2 gap-6 items-center">
-          <Reveal anim="zoom">
-            <div className={`${panel} bg-sky p-4`}>
-              <div className="relative bg-paper rounded-[1.5rem] p-3">
-                <div className="checks checks-blue rounded-2xl h-72" />
-                <span className="absolute inset-0 grid place-items-center"><span className="display text-4xl bg-yellow text-red rounded-full px-8 py-3">Ideology</span></span>
-              </div>
-            </div>
-          </Reveal>
-          <ul className="text-right space-y-5 px-2">
-            {beliefs.map((b, i) => (
-              <Reveal key={b.text} anim="right" delay={0.12 * i}>
-                <li className={`${listItem} ${i === beliefs.length - 1 ? "underline underline-offset-8" : ""}`}>{b.text}</li>
-              </Reveal>
+          }
+        />
+        <Reveal anim="rise" delay={0.2} className="mx-auto max-w-6xl mt-10">
+          <ul className="flex flex-wrap items-center gap-3">
+            <li className="text-sm font-semibold uppercase tracking-[0.18em] mr-2">Across every channel</li>
+            {channels.map(([ic, label]) => (
+              <li key={label} className="inline-flex items-center gap-2 bg-paper/80 rounded-full pl-3 pr-4 py-1.5 text-sm font-medium"><Icon name={ic} size="small" className="w-5 h-5 text-red" />{label}</li>
             ))}
           </ul>
-        </section>
+        </Reveal>
+      </div>
 
-        {/* 4. Remote */}
-        <Reveal anim="pop"><div className={panel}><Remote /></div></Reveal>
-
-        {/* 5. Creative criminals: the quirky lineup */}
-        <Reveal anim="flipx"><div className={panel}><CriminalsLine /></div></Reveal>
-
-        {/* 6. Creative licence */}
-        <Reveal anim="rise"><div className={panel}><License /></div></Reveal>
-
-        {/* 7. Our very official, unofficial rules */}
-        <section id="rules" className="grid md:grid-cols-[1.2fr_1fr] gap-6 items-center">
-          <div className="space-y-5 px-2">
-            <Reveal anim="wipe"><h2 className="text-3xl sm:text-5xl text-red">Our very official, unofficial rules</h2></Reveal>
-            <ol className="space-y-3">
-              {rules.map(([t, b], n) => (
-                <Reveal key={t} anim="left" delay={0.1 * n}>
-                  <li><span className={listItem}>{n + 1}. {t}</span> <span className="block text-sm">{b}</span></li>
-                </Reveal>
+      {/* 2. Introduction of the founder */}
+      <section id="founder" className="scallop-top bg-sky px-5 py-24" style={{ "--fill": "var(--sky)" }}>
+        <div className="mx-auto max-w-6xl grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
+          <Reveal anim="left">
+            <p className={eyebrow}>About the founder</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl text-red">Hi, I&apos;m Sathvika.</h2>
+            <p className="mt-5 text-lg max-w-xl">I started this agency because brands deserve better than copy-paste creativity. I combine strategy, design and performance thinking, with a slightly unreasonable amount of coffee, to build brands people remember.</p>
+            <p className="mt-3 text-lg max-w-xl">We&apos;re a small team on purpose. When you work with us, you work with me.</p>
+          </Reveal>
+          <Reveal anim="right">
+            <dl className={`${card} p-6 divide-y divide-ink/10`}>
+              {[["Focus", "Brand and performance, together"], ["Approach", "Strategy first, then the creative"], ["Fuel", "Filter coffee, mostly"]].map(([k, v]) => (
+                <div key={k} className="py-3 first:pt-0 last:pb-0"><dt className="text-xs font-semibold uppercase tracking-[0.18em] text-red">{k}</dt><dd className="mt-1 text-lg">{v}</dd></div>
               ))}
-            </ol>
-          </div>
-          <Reveal anim="drop">
-            <div className={`${panel} bg-blue p-4`}>
-              <div className="bg-paper rounded-[1.5rem] p-3 relative">
-                <div className="rounded-2xl bg-butter h-80 grid place-items-center"><Mascot mood="shock" className="h-64" /></div>
-                <span className="absolute inset-0 grid place-items-center pointer-events-none"><span className="display text-3xl bg-yellow text-red rounded-full px-6 py-2 -rotate-3">Rules</span></span>
-              </div>
-            </div>
+            </dl>
           </Reveal>
-        </section>
+        </div>
+      </section>
 
-        {/* 8. Services */}
-        <section id="services" className={`${panel} bg-yellow p-5 sm:p-8`}>
-          <Reveal anim="zoom">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <h2 className="text-4xl sm:text-6xl text-red leading-[1.05]">What we can<br />create for you</h2>
-              <a href="#contact" className="btn bg-red text-paper !py-2 !px-5 text-sm shrink-0">Start creating</a>
-            </div>
+      {/* 3. Our ideology */}
+      <section id="ideology" className="scallop-top bg-paper px-5 py-24" style={{ "--fill": "var(--paper)" }}>
+        <div className="mx-auto max-w-6xl grid lg:grid-cols-[1fr_1.6fr] gap-12">
+          <Reveal anim="left">
+            <p className={eyebrow}>Our ideology</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl text-red">How we think</h2>
+            <p className="mt-4 text-lg max-w-sm">Four beliefs behind every campaign, website and brand we make.</p>
           </Reveal>
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 gap-5">
+            {beliefs.map(([t, d], i) => (
+              <Reveal key={t} anim="rise" delay={0.1 * i}>
+                <div className={`${card} p-6 h-full border-t-4`} style={{ borderTopColor: ["var(--red)", "var(--blue)", "var(--yellow)", "var(--orange)"][i] }}>
+                  <h3 className="display text-xl">{t}</h3><p className="mt-2">{d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Remote */}
+      <div className="scallop-top" style={{ "--fill": "var(--blue)" }}><Reveal anim="right"><Remote /></Reveal></div>
+
+      {/* 5. Creative criminals: the quirky lineup */}
+      <div className="scallop-top" style={{ "--fill": "var(--ink)" }}><Reveal anim="flipx"><CriminalsLine /></Reveal></div>
+
+      {/* 6. Creative licence */}
+      <div className="scallop-top" style={{ "--fill": "var(--yellow)" }}><Reveal anim="zoom"><License /></Reveal></div>
+
+      {/* 7. Our very official, unofficial rules */}
+      <section id="rules" className="scallop-top bg-sky px-5 py-24" style={{ "--fill": "var(--sky)" }}>
+        <div className="mx-auto max-w-6xl grid lg:grid-cols-[1fr_1.6fr] gap-12">
+          <Reveal anim="wipe">
+            <p className={eyebrow}>The house rules</p>
+            <h2 className="mt-3 text-3xl sm:text-5xl text-red">Our very official, unofficial rules</h2>
+            <p className="mt-4 text-lg max-w-sm">Not legally binding. Taken very seriously.</p>
+          </Reveal>
+          <ol className="grid sm:grid-cols-2 gap-5">
+            {rules.map(([t, b], n) => (
+              <Reveal key={t} anim="rise" delay={0.08 * n}>
+                <li className={`${card} p-5 flex gap-4 h-full`}>
+                  <span className="shrink-0 w-9 h-9 rounded-full bg-red text-paper grid place-items-center font-bold">{n + 1}</span>
+                  <div><h3 className="display text-lg">{t}</h3><p className="mt-1 text-sm">{b}</p></div>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 8. Services */}
+      <section id="services" className="scallop-top bg-butter px-5 py-24" style={{ "--fill": "var(--butter)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Reveal anim="drop">
+            <p className={eyebrow}>Services</p>
+            <h2 className="mt-3 text-4xl sm:text-5xl text-red max-w-xl">Everything your brand needs to grow</h2>
+          </Reveal>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, n) => (
-              <Reveal key={s.key} anim="rise" delay={0.08 * n}>
-                <article className="bg-paper rounded-3xl p-3 h-full">
-                  <div className="rounded-2xl p-3" style={{ background: s.color }}><svg viewBox="0 0 100 100" role="img" aria-label={s.name}>{icons[s.key]}</svg></div>
-                  <h3 className="display text-lg text-red mt-3">{s.name}</h3>
-                  <p className="text-sm">{s.line}</p>
+              <Reveal key={s.name} anim="rise" delay={0.08 * (n % 3)}>
+                <article className={`${card} p-6 h-full flex flex-col transition hover:-translate-y-1`}>
+                  <div className="w-16 h-16 rounded-2xl grid place-items-center text-ink" style={{ background: s.tint }}><Icon name={s.icon} className="w-9 h-9" /></div>
+                  <h3 className="display text-xl mt-5">{s.name}</h3>
+                  <p className="mt-2">{s.line}</p>
+                  <ul className="mt-4 pt-4 border-t border-ink/10 space-y-1.5 text-sm">
+                    {s.points.map((p) => <li key={p} className="flex gap-2"><span className="text-red" aria-hidden="true">✓</span>{p}</li>)}
+                  </ul>
                 </article>
               </Reveal>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 9. Contact */}
-        <Reveal anim="wipe"><div className={panel}><Contact /></div></Reveal>
+      {/* 9. Contact */}
+      <div className="scallop-top" style={{ "--fill": "var(--orange)" }}><Reveal anim="wipe"><Contact /></Reveal></div>
 
-        {/* Footer */}
-        <footer className={`${panel} bg-red text-paper p-8 sm:p-10`}>
-          <div className="grid sm:grid-cols-[1fr_auto_auto] gap-8">
-            <p className="display text-6xl sm:text-7xl leading-none">Sathvika</p>
-            <ul className="text-sm space-y-1"><li className="display">Menu</li><li><a href="#founder">Founder</a></li><li><a href="#ideology">Ideology</a></li><li><a href="#remote">Remote</a></li></ul>
-            <ul className="text-sm space-y-1"><li className="display">More</li><li><a href="#criminals">Criminals</a></li><li><a href="#rules">Rules</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul>
-          </div>
-          <p className="mt-10 pt-4 border-t border-paper/40 text-xs flex flex-wrap justify-between gap-2"><span>More ideas. More Sathvika.</span><span>All rights reserved. Sathvika © 2026</span></p>
-        </footer>
-      </div>
+      <footer className="scallop-top bg-red text-paper px-5 py-14" style={{ "--fill": "var(--red)" }}>
+        <div className="mx-auto max-w-6xl grid sm:grid-cols-[1.4fr_1fr_1fr] gap-10">
+          <div><p className="display text-4xl">Sathvika</p><p className="mt-2 max-w-xs text-sm">A creative marketing agency for brands that want to be noticed.</p></div>
+          <ul className="text-sm space-y-2"><li className="display">Services</li>{services.map((s) => <li key={s.name}><a href="#services">{s.name}</a></li>)}</ul>
+          <ul className="text-sm space-y-2"><li className="display">Explore</li><li><a href="#founder">Founder</a></li><li><a href="#ideology">Ideology</a></li><li><a href="#remote">Remote</a></li><li><a href="#criminals">Creative Criminals</a></li><li><a href="#rules">Rules</a></li><li><a href="#contact">Contact</a></li></ul>
+        </div>
+        <p className="mx-auto max-w-6xl mt-10 pt-4 border-t border-paper/30 text-xs">© 2026 Sathvika. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
