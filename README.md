@@ -4,7 +4,7 @@ A bright, playful one-page website for the Sathvika creative agency, built from 
 Frontend only for now (no backend). Built with Next.js (App Router), React, Tailwind CSS and JavaScript.
 
 ## Sections
-Founder photos (hero) · Founder intro · Our ideology · Remote (door) · Creative Criminals (Penny mugshot) ·
+Founder photos (hero) · Founder intro · Our ideology · Remote (door) · Creative Criminals (marketing-tool mugshots) ·
 Creative Licence · Our very official, unofficial rules · Services (postage stamps) · Contact (postcard)
 
 ## Run it
@@ -20,7 +20,7 @@ npm run lint     # code checks
   Until then, the frames show a placeholder.
 - **Wording:** all text is draft copy written to match the brief. Edit it in `src/components/*.jsx`.
 - **Colours:** change them at the top of `src/app/globals.css` (pink is kept to tiny accents on purpose).
-- **Mascot (Penny):** drawn in `src/components/Mascot.jsx`; replace with the real artwork whenever ready.
+- **Mascot:** the old pen mascot is no longer used on the site (`src/components/Mascot.jsx` is kept only by the alternative designs under `/designs`).
 - **Contact form:** only plays the "postcard sent" animation. Nothing is sent until a backend is added.
 
 ## Photos

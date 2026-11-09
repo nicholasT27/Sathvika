@@ -5,6 +5,9 @@ const big = {
   website: (<><rect x="5" y="8" width="38" height="32" rx="4" /><path d="M5 17 H43" /><circle cx="10" cy="12.5" r="1.1" fill="currentColor" /><circle cx="14.5" cy="12.5" r="1.1" fill="currentColor" /><rect x="10" y="22" width="12" height="12" rx="1.5" /><path d="M27 23 H38 M27 29 H38 M27 35 H33" /></>),
   strategy: (<><circle cx="22" cy="26" r="16" /><circle cx="22" cy="26" r="9" /><circle cx="22" cy="26" r="2" fill="currentColor" /><path d="M23.5 24.5 L40 8 M33 8 H40 V15" /></>),
   creative: (<><path d="M7 38 C13 8, 35 8, 41 38" /><rect x="4.5" y="35.5" width="5" height="5" rx="1" /><rect x="38.5" y="35.5" width="5" height="5" rx="1" /><circle cx="24" cy="15" r="2.4" fill="currentColor" /><path d="M7 38 L12 24 M41 38 L36 24" strokeDasharray="2 3" /></>),
+  ads: (<><path d="M6 20 V28 H14 L32 39 V9 L14 20 Z" /><path d="M10 28 L12 38 H17 L15 29" /><path d="M37 17 Q43 24 37 31" /></>),
+  social: (<><circle cx="11" cy="24" r="5" /><circle cx="36" cy="11" r="5" /><circle cx="36" cy="37" r="5" /><path d="M15.5 21.5 L31.5 13.5 M15.5 26.5 L31.5 34.5" /></>),
+  email: (<><rect x="5" y="10" width="38" height="28" rx="5" /><path d="M6 13 L24 27 L42 13" /></>),
   content: (<><rect x="6" y="9" width="36" height="25" rx="4" /><path d="M20 15.5 L30 21.5 L20 27.5 Z" fill="currentColor" /><path d="M10 40 H26 M32 40 H38" /></>),
 };
 
