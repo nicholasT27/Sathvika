@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 const options = [
-  ["/", "★ Chosen: Clothesline (home page)", "The site as it stands: E2 with all nine sections in the client order.", "bg-sky"],
+  ["/", "★ Home page: Rayo Panels", "The current site: pink backdrop, cream card, one founder photo, all nine sections.", "bg-yellow"],
+  ["/designs/polaroid-line", "E2 · Clothesline", "Previous pick: pegged polaroids on a washing line.", "bg-sky"],
   ["/designs/framed", "A · Framed Panels", "Thin red frame with chunky rounded panels. Calm and clean.", "bg-blue"],
   ["/designs/scrapbook", "B · Scrapbook", "Soft pink table, tilted cards, cloud blobs and floating tags.", "bg-pink"],
   ["/designs/constructor", "C · Constructor", "Grid paper where visitors build their own campaign.", "bg-yellow"],
