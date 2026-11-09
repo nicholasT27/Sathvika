@@ -25,7 +25,7 @@ export default function Reveal({ anim = "rise", delay = 0, className = "", style
   }, []);
   return (
     <div ref={outer} className={className} style={style}>
-      <div data-anim={anim} className="rv" style={{ "--d": `${delay}s`, "--sx": style["--sx"], "--sy": style["--sy"] }}>
+      <div data-anim={anim} className="rv h-full" style={{ "--d": `${delay}s`, "--sx": style["--sx"], "--sy": style["--sy"] }}>
         {children}
       </div>
     </div>

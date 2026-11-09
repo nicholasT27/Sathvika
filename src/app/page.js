@@ -25,27 +25,27 @@ const listItem = "text-2xl sm:text-3xl text-red italic font-semibold";
 export default function Home() {
   const panel = "rounded-[1.75rem] overflow-hidden";
   return (
-    <main className="soft bg-pink pt-24 p-3 sm:p-6 overflow-x-clip">
+    <main className="soft bg-sky p-3 pt-24 sm:p-6 sm:pt-28 overflow-x-clip">
       <Nav /><ScrollBar />
       <div className="mx-auto max-w-5xl bg-paper border border-red/60 rounded-[2rem] p-3 sm:p-5 space-y-12 sm:space-y-16">
 
-        {/* 1. Founder photo straight away */}
-        <section id="top" className={`${panel} bg-yellow p-5 sm:p-8`}>
-          <Reveal anim="drop">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <h1 className="text-4xl sm:text-6xl text-red leading-[1.05]">Meet Sathvika,<br />the face behind<br />the chaos</h1>
-              <a href="#contact" className="btn bg-red text-paper !py-2 !px-5 text-sm shrink-0">Start a project</a>
-            </div>
-            <p className="mt-4 max-w-sm text-sm">A creative agency for brands tired of beige. Bold ideas, real strategy and zero boring decks. Make it truly yours.</p>
+        {/* 1. Founder photo straight away. Layout copies the reference: heading + button on top, paragraph under the heading, tall photo on the right, shorter tile bottom-left. */}
+        <section id="top" className={`${panel} bg-yellow p-5 sm:p-8 grid md:grid-cols-2 md:grid-rows-[auto_auto_1fr] gap-x-4 gap-y-4`}>
+          <Reveal anim="drop" className="md:col-start-1 md:col-span-2 md:row-start-1">
+            <h1 className="text-4xl sm:text-5xl text-red leading-[1.1] md:pr-44">Meet Sathvika, the face<br />behind the chaos</h1>
           </Reveal>
-          <div className="mt-6 grid md:grid-cols-2 gap-4">
-            <Reveal anim="left">
-              <div className="bg-paper rounded-3xl h-72 md:h-96 grid place-items-center"><Mascot mood="happy" className="h-56 md:h-72 bob" /></div>
-            </Reveal>
-            <Reveal anim="right">
-              <div role="img" aria-label="Sathvika, founder of the agency" className="rounded-3xl h-72 md:h-96 bg-sky bg-cover bg-center" style={{ backgroundImage: `url(${FOUNDER_PHOTO})` }} />
-            </Reveal>
-          </div>
+          <Reveal anim="drop" delay={0.1} className="md:col-start-2 md:row-start-1 md:justify-self-end md:self-start relative z-10">
+            <a href="#contact" className="btn bg-red text-paper !py-2 !px-5 text-sm">Start a project</a>
+          </Reveal>
+          <Reveal anim="left" className="md:col-start-1 md:row-start-2">
+            <p className="max-w-sm text-sm">A creative agency for brands tired of beige. Bold ideas, real strategy and zero boring decks. Make it truly yours.</p>
+          </Reveal>
+          <Reveal anim="right" className="md:col-start-2 md:row-start-2 md:row-span-2">
+            <div role="img" aria-label="Sathvika, founder of the agency" className="rounded-3xl h-80 md:h-full md:min-h-[26rem] bg-sky bg-cover bg-center" style={{ backgroundImage: `url(${FOUNDER_PHOTO})` }} />
+          </Reveal>
+          <Reveal anim="rise" delay={0.1} className="md:col-start-1 md:row-start-3">
+            <div className="bg-paper rounded-3xl h-64 md:h-full md:min-h-[14rem] grid place-items-center"><Mascot mood="happy" className="h-44 md:h-52 bob" /></div>
+          </Reveal>
         </section>
 
         {/* 2. Introduction of the founder */}
