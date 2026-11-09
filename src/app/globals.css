@@ -11,6 +11,7 @@
   --pink: #fc8da1;
   --ink: #3b1410;
   --paper: #fff8e1;
+  --svc1: #e5362b; --svc2: #0ba0d6; --svc3: #f26b2d; --svc4: #3b8f5c; --svc5: #8a5cc2; --svc6: #d6a300;
 }
 
 @theme inline {
@@ -84,3 +85,14 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
   .marquee, .bob, .steam { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* Soft theme: pastel colours from the Rayo journal reference. Wrap a page in class "soft" to use it. */
+.soft {
+  --blue: #86b6cf; --sky: #d3e6ee; --yellow: #ffd987; --butter: #fbf1da; --red: #cd4437;
+  --orange: #eea06a; --pink: #ffb7c1; --ink: #6a3a33; --paper: #f8efdc;
+  --svc1: #d9776c; --svc2: #86b6cf; --svc3: #eea06a; --svc4: #9cc7a8; --svc5: #b9a4d6; --svc6: #f0c65c;
+  background: var(--paper); color: var(--ink);
+}
+.soft .bg-blue, .soft .bg-orange, .soft .bg-yellow, .soft .bg-sky, .soft .bg-pink { color: var(--ink); }
+.soft .bg-red { color: #fff8e1; }
+.soft .stamp h3, .soft .stamp p { color: var(--ink); }

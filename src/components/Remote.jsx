@@ -17,7 +17,7 @@ export default function Remote() {
           <p className="mt-3 text-sm opacity-90">👉 Go on, turn the knob.</p>
         </div>
         <div className="flex justify-center [perspective:1200px]">
-          <div className="relative w-64 sm:w-72 h-[26rem] rounded-t-[999px] border-[5px] border-ink bg-yellow shadow-[8px_8px_0_#3b1410] overflow-hidden">
+          <div className="relative w-64 sm:w-72 h-[26rem] rounded-t-[999px] border-[5px] border-ink bg-yellow shadow-[8px_8px_0_var(--ink)] overflow-hidden">
             {/* What you see behind the door */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-ink text-center p-6 gap-2">
               <span className="text-5xl">🌍</span>
@@ -32,7 +32,7 @@ export default function Remote() {
               className="absolute inset-0 rounded-t-[999px] bg-red border-r-[5px] border-ink transition-transform duration-700 cursor-pointer"
             >
               <span className="absolute left-1/2 -translate-x-1/2 top-16 w-28 h-44 rounded-t-[999px] border-[4px] border-ink/60" />
-              <span className="absolute right-6 top-1/2 w-9 h-9 rounded-full bg-yellow border-[4px] border-ink shadow-[2px_3px_0_#3b1410] hover:scale-110 transition-transform" />
+              <span className="absolute right-6 top-1/2 w-9 h-9 rounded-full bg-yellow border-[4px] border-ink shadow-[2px_3px_0_var(--ink)] hover:scale-110 transition-transform" />
             </button>
           </div>
         </div>

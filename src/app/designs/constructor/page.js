@@ -16,7 +16,7 @@ export const metadata = { title: "Sathvika | Design C: Constructor" };
 export default function Constructor() {
   const card = "bg-[#fffaf0] border-2 border-red/70 rounded-3xl p-6 sm:p-8";
   return (
-    <main className="pt-24 text-ink" style={{ backgroundColor: "#fff8e1", backgroundImage: "linear-gradient(#ffe77e55 1px, transparent 1px), linear-gradient(90deg, #ffe77e55 1px, transparent 1px)", backgroundSize: "28px 28px" }}>
+    <main className="soft pt-24 text-ink" style={{ backgroundColor: "#fff8e1", backgroundImage: "linear-gradient(#ffe77e55 1px, transparent 1px), linear-gradient(90deg, #ffe77e55 1px, transparent 1px)", backgroundSize: "28px 28px" }}>
       <Nav />
       <div id="top" className="mx-auto max-w-4xl px-4 pt-8 text-center">
         <h1 className="text-5xl sm:text-7xl text-red">Create your own<br />creative agency vibe</h1>

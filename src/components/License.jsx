@@ -10,7 +10,7 @@ export default function License() {
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl sm:text-6xl">Licensed to <span className="text-red">create</span></h2>
         <p className="mt-3">Every criminal needs paperwork. Ours is fully (un)official.</p>
-        <div className="relative mt-10 mx-auto max-w-xl bg-butter border-[4px] border-ink rounded-3xl shadow-[8px_8px_0_#3b1410] p-5 text-left rotate-[-1.5deg]">
+        <div className="relative mt-10 mx-auto max-w-xl bg-butter border-[4px] border-ink rounded-3xl shadow-[8px_8px_0_var(--ink)] p-5 text-left rotate-[-1.5deg]">
           <div className="bg-red text-paper display px-4 py-2 rounded-xl flex justify-between text-sm sm:text-base">
             <span>CREATIVE LICENCE</span><span>CLASS: ALL</span>
           </div>

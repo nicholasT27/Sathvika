@@ -6,7 +6,7 @@ export default function Founder() {
   return (
     <section id="founder" className="relative py-24 px-5 bg-sky">
       <div className="mx-auto max-w-5xl grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
-        <div className="bg-paper border-[3px] border-ink rounded-[2.5rem] p-8 sm:p-10 shadow-[8px_8px_0_#3b1410] -rotate-1">
+        <div className="bg-paper border-[3px] border-ink rounded-[2.5rem] p-8 sm:p-10 shadow-[8px_8px_0_var(--ink)] -rotate-1">
           <p className="display text-blue text-lg">Chapter one</p>
           <h2 className="text-4xl sm:text-5xl mt-1">Hi, I&apos;m Sathvika.</h2>
           <p className="mt-4 text-lg">

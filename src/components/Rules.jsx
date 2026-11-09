@@ -16,7 +16,7 @@ export default function Rules() {
         <p className="text-center mt-3 text-sm uppercase tracking-widest">Rulebook · Page 1 of 1 · Not legally binding</p>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {rules.map(([title, body, bg, rot], n) => (
-            <article key={title} style={{ transform: `rotate(${rot}deg)` }} className={`${bg} relative border-[3px] border-ink rounded-2xl p-6 shadow-[6px_6px_0_#3b1410] hover:-translate-y-1 transition-transform`}>
+            <article key={title} style={{ transform: `rotate(${rot}deg)` }} className={`${bg} relative border-[3px] border-ink rounded-2xl p-6 shadow-[6px_6px_0_var(--ink)] hover:-translate-y-1 transition-transform`}>
               <span className="absolute -top-5 -left-3 w-12 h-12 rounded-full bg-red text-paper border-[3px] border-ink grid place-items-center display text-xl">{n + 1}</span>
               <h3 className="display text-2xl mt-2">{title}</h3>
               <p className="mt-2">{body}</p>

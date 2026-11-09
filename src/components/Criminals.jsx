@@ -31,7 +31,7 @@ export default function Criminals() {
               ))}
               <Mascot mood={moods[i]} className="relative mx-auto h-full w-auto" />
             </div>
-            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 -rotate-2 bg-paper text-ink px-4 py-2 border-[3px] border-ink display whitespace-nowrap shadow-[4px_4px_0_#e5362b]">
+            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 -rotate-2 bg-paper text-ink px-4 py-2 border-[3px] border-ink display whitespace-nowrap shadow-[4px_4px_0_var(--red)]">
               PENNY · ID 0001
             </div>
           </button>

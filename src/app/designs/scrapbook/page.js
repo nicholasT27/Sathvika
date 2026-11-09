@@ -25,14 +25,14 @@ const clouds = [
 // Design B: a red scrapbook table with tilted paper cards, cloud shapes and floating tags.
 export default function Scrapbook() {
   return (
-    <main className="bg-red text-paper pt-24 overflow-hidden">
+    <main className="soft bg-pink text-ink pt-24 overflow-hidden">
       <Nav />
       {/* Hero */}
       <section id="top" className="relative mx-auto max-w-6xl px-5 pt-10 pb-20 text-center">
         {tags.map(([t, c, pos]) => (
           <span key={t} className={`hidden md:block absolute ${pos} ${c} ${c.includes("text-") ? "" : "text-ink"} px-4 py-1 rounded-full border-2 border-ink text-sm font-semibold`}>{t}</span>
         ))}
-        <h1 className="text-[22vw] sm:text-[11rem] leading-none text-butter drop-shadow-[6px_6px_0_#3b1410]">Sathvika</h1>
+        <h1 className="text-[22vw] sm:text-[11rem] leading-none text-red">Sathvika</h1>
         <p className="mt-4 text-xl max-w-lg mx-auto">Our brand: your hobby turned into a business people can&apos;t stop talking about.</p>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {frames.map((f, i) => (
@@ -70,10 +70,10 @@ export default function Scrapbook() {
 
       {/* Rules as stickers */}
       <section id="rules" className="mx-auto max-w-5xl px-5 pb-20 text-center">
-        <h2 className="text-4xl sm:text-6xl text-butter">Our very official, unofficial rules</h2>
+        <h2 className="text-4xl sm:text-6xl text-red">Our very official, unofficial rules</h2>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           {rules.map(([t, b, bg], n) => (
-            <div key={t} className={`${bg.replace("bg-pink", "bg-yellow")} text-ink w-64 rounded-3xl border-[3px] border-ink p-5 shadow-[5px_5px_0_#3b1410] ${n % 2 ? "rotate-3" : "-rotate-3"}`}>
+            <div key={t} className={`${bg.replace("bg-pink", "bg-yellow")} text-ink w-64 rounded-3xl border-[3px] border-ink p-5 shadow-[5px_5px_0_var(--ink)] ${n % 2 ? "rotate-3" : "-rotate-3"}`}>
               <h3 className="display text-xl text-red">{t}</h3><p className="text-sm mt-1">{b}</p>
             </div>
           ))}
@@ -86,7 +86,7 @@ export default function Scrapbook() {
         <div className="mt-10 mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((s, n) => (
             <div key={s.key} className={`text-center ${n % 2 ? "rotate-3" : "-rotate-3"}`}>
-              <div className="mx-auto w-40 h-40 sm:w-48 sm:h-48 rounded-full border-[5px] border-ink grid place-items-center shadow-[5px_5px_0_#3b1410]" style={{ background: s.color }}>
+              <div className="mx-auto w-40 h-40 sm:w-48 sm:h-48 rounded-full border-[5px] border-ink grid place-items-center shadow-[5px_5px_0_var(--ink)]" style={{ background: s.color }}>
                 <svg viewBox="0 0 100 100" className="w-24 sm:w-28" role="img" aria-label={s.name}>{icons[s.key]}</svg>
               </div>
               <h3 className="display text-xl mt-4">{s.name}</h3><p className="text-sm">{s.line}</p>

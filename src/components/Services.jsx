@@ -11,12 +11,12 @@ export const icons = {
 };
 
 export const services = [
-  { key: "branding", name: "Branding", line: "Logos, looks & a voice that sounds like you.", color: "#e5362b", price: "5¢" },
-  { key: "performance", name: "Performance Marketing", line: "Ads that pay for themselves. Numbers go up.", color: "#0ba0d6", price: "8¢" },
-  { key: "website", name: "Website Designing", line: "Sites that load fast and look unforgettable.", color: "#f26b2d", price: "10¢" },
-  { key: "strategy", name: "Marketing Strategy", line: "A plan with a point of view.", color: "#3b8f5c", price: "5¢" },
-  { key: "creative", name: "Creative", line: "Campaign ideas with attitude and a wink.", color: "#8a5cc2", price: "15¢" },
-  { key: "content", name: "Content", line: "Posts, reels & words people actually read.", color: "#d6a300", price: "3¢" },
+  { key: "branding", name: "Branding", line: "Logos, looks & a voice that sounds like you.", color: "var(--svc1)", price: "5¢" },
+  { key: "performance", name: "Performance Marketing", line: "Ads that pay for themselves. Numbers go up.", color: "var(--svc2)", price: "8¢" },
+  { key: "website", name: "Website Designing", line: "Sites that load fast and look unforgettable.", color: "var(--svc3)", price: "10¢" },
+  { key: "strategy", name: "Marketing Strategy", line: "A plan with a point of view.", color: "var(--svc4)", price: "5¢" },
+  { key: "creative", name: "Creative", line: "Campaign ideas with attitude and a wink.", color: "var(--svc5)", price: "15¢" },
+  { key: "content", name: "Content", line: "Posts, reels & words people actually read.", color: "var(--svc6)", price: "3¢" },
 ];
 
 // Services: each one is a postage stamp with a picture and its name, with Penny cheering from the side.
@@ -32,7 +32,7 @@ export default function Services() {
               <article key={s.key} style={{ "--c": s.color, transform: `rotate(${n % 2 ? 2 : -2}deg)` }} className="stamp group hover:rotate-0 hover:scale-105 transition-transform shadow-[4px_5px_0_rgba(59,20,16,0.35)]">
                 <div className="bg-paper rounded-md p-1">
                   <svg viewBox="0 0 100 100" className="w-full" role="img" aria-label={`${s.name} illustration`}>
-                    <rect width="100" height="100" fill={s.color} opacity="0.18" />
+                    <rect width="100" height="100" style={{ fill: s.color }} opacity="0.18" />
                     {icons[s.key]}
                   </svg>
                 </div>

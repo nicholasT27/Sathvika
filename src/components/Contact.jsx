@@ -20,7 +20,7 @@ export default function Contact() {
         <p className="text-paper text-center mt-3">Tell us about your project. She reads every card (while sipping).</p>
         <div className="relative mt-12">
           {!sent ? (
-            <form onSubmit={post} className="bg-butter border-[4px] border-ink rounded-xl shadow-[8px_8px_0_#3b1410] p-6 sm:p-8 grid sm:grid-cols-[1fr_auto_1fr] gap-6 -rotate-1">
+            <form onSubmit={post} className="bg-butter border-[4px] border-ink rounded-xl shadow-[8px_8px_0_var(--ink)] p-6 sm:p-8 grid sm:grid-cols-[1fr_auto_1fr] gap-6 -rotate-1">
               <div className="space-y-4">
                 <p className="display text-red text-xl">Dear Penny,</p>
                 <label className="block text-sm">I&apos;m
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div className="hidden sm:block w-[3px] bg-ink/40" aria-hidden="true" />
               <div className="space-y-4 relative">
-                <div className="absolute -top-3 -right-3 stamp !p-2 w-20 text-center" style={{ "--c": "#0ba0d6" }}>
+                <div className="absolute -top-3 -right-3 stamp !p-2 w-20 text-center" style={{ "--c": "var(--blue)" }}>
                   <Mascot mood="happy" steam={false} className="h-16 mx-auto" />
                 </div>
                 <label className="block text-sm pt-14 sm:pt-12">Here&apos;s what I need
@@ -42,7 +42,7 @@ export default function Contact() {
               </div>
             </form>
           ) : (
-            <div className="bg-butter border-[4px] border-ink rounded-xl shadow-[8px_8px_0_#3b1410] p-10 text-center">
+            <div className="bg-butter border-[4px] border-ink rounded-xl shadow-[8px_8px_0_var(--ink)] p-10 text-center">
               <div className="mx-auto w-28 bob"><Mascot mood="wink" /></div>
               <h3 className="display text-3xl mt-4">Postcard delivered!</h3>
               <p className="mt-2">Penny has your letter and is already doodling ideas. Expect a reply soon.</p>

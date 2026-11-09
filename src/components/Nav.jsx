@@ -7,7 +7,7 @@ const links = [
 export default function Nav() {
   return (
     <header className="fixed top-3 left-0 right-0 z-50 px-3">
-      <nav className="mx-auto max-w-6xl flex items-center justify-between gap-3 rounded-full border-[3px] border-ink bg-paper/95 text-ink backdrop-blur px-5 py-2 shadow-[4px_4px_0_#3b1410]">
+      <nav className="mx-auto max-w-6xl flex items-center justify-between gap-3 rounded-full border-[3px] border-ink bg-paper/95 text-ink backdrop-blur px-5 py-2 shadow-[4px_4px_0_var(--ink)]">
         <a href="#top" className="display text-xl text-red">Sathvika<span className="text-blue">*</span></a>
         <ul className="hidden lg:flex gap-5 font-semibold">
           {links.map(([name, href]) => (

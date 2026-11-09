@@ -34,7 +34,7 @@ export default function WavyFrame({ id, color, src, label, children, bumps = 10 
           <path d={inner} transform="translate(50 50) scale(0.8) translate(-50 -50)" />
         </clipPath>
       </defs>
-      <path d={outer} fill={color} stroke="#3b1410" strokeWidth="1.6" />
+      <path d={outer} style={{ fill: color, stroke: "var(--ink)" }} strokeWidth="1.6" />
       <g clipPath={`url(#clip-${id})`}>
         <rect width="100" height="100" fill="#fff8e1" />
         {children}

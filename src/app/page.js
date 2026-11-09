@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 // The one and only page: every section stacked in the order the client asked for.
 export default function Home() {
   return (
-    <main>
+    <main className="soft">
       <Nav />
       <Hero />
       <Founder />

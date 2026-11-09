@@ -16,7 +16,7 @@ export const metadata = { title: "Sathvika | Design A: Framed Panels" };
 export default function Framed() {
   const panel = "rounded-[1.75rem] overflow-hidden";
   return (
-    <main className="bg-blue p-3 sm:p-6 pt-24">
+    <main className="soft bg-blue p-3 sm:p-6 pt-24">
       <Nav />
       <div className="mx-auto max-w-6xl bg-paper border-2 border-red rounded-[2.25rem] p-3 sm:p-5 space-y-4">
         {/* Hero: words on the left, founder photos on the right */}
