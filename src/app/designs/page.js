@@ -6,7 +6,9 @@ const options = [
   ["/designs/scrapbook", "B · Scrapbook", "Soft pink table, tilted cards, cloud blobs and floating tags.", "bg-pink"],
   ["/designs/constructor", "C · Constructor", "Grid paper where visitors build their own campaign.", "bg-yellow"],
   ["/designs/journal", "D · Journal (new)", "Editorial pink page with big words and right-aligned lists.", "bg-sky"],
-  ["/designs/polaroid", "E · Polaroid Wall (new)", "Taped polaroids, sticky notes and photo-style service cards.", "bg-butter"],
+  ["/designs/polaroid", "E1 · Polaroid Wall", "Taped polaroids and sticky notes. Each section enters differently as you scroll.", "bg-butter"],
+  ["/designs/polaroid-line", "E2 · Clothesline (new)", "Polaroids and cards peg onto a washing line and sway. Different entrance per section.", "bg-sky"],
+  ["/designs/polaroid-desk", "E3 · Photo Desk (new)", "Pink desk where photos spill out of a pile, paper strips wipe in and service cards flip.", "bg-pink"],
   ["/designs/bento", "F · Bento (new)", "A mosaic of tiles up top, one per section. Click to jump.", "bg-orange"],
 ];
 

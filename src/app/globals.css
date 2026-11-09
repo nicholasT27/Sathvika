@@ -91,8 +91,30 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
   --blue: #86b6cf; --sky: #d3e6ee; --yellow: #ffd987; --butter: #fbf1da; --red: #cd4437;
   --orange: #eea06a; --pink: #ffb7c1; --ink: #6a3a33; --paper: #f8efdc;
   --svc1: #d9776c; --svc2: #86b6cf; --svc3: #eea06a; --svc4: #9cc7a8; --svc5: #b9a4d6; --svc6: #f0c65c;
-  background: var(--paper); color: var(--ink);
 }
+@layer base { .soft { background: var(--paper); color: var(--ink); } }
 .soft .bg-blue, .soft .bg-orange, .soft .bg-yellow, .soft .bg-sky, .soft .bg-pink { color: var(--ink); }
 .soft .bg-red { color: #fff8e1; }
 .soft .stamp h3, .soft .stamp p { color: var(--ink); }
+
+/* Scroll reveals: each section picks one of these entrances (see Reveal.jsx). */
+.rv { transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.9, 0.25, 1.1), clip-path 1s ease; transition-delay: var(--d, 0s); }
+.rv[data-ready="1"]:not(.in) { opacity: 0; }
+.rv[data-ready="1"][data-anim="drop"]:not(.in) { transform: translateY(-160px) rotate(-28deg); }
+.rv[data-ready="1"][data-anim="left"]:not(.in) { transform: translateX(-160px) rotate(-5deg); }
+.rv[data-ready="1"][data-anim="right"]:not(.in) { transform: translateX(160px) rotate(5deg); }
+.rv[data-ready="1"][data-anim="pop"]:not(.in) { transform: scale(0.2) rotate(-14deg); }
+.rv[data-ready="1"][data-anim="flip"]:not(.in) { transform: perspective(900px) rotateY(88deg); }
+.rv[data-ready="1"][data-anim="flipx"]:not(.in) { transform: perspective(900px) rotateX(-80deg); transform-origin: top; }
+.rv[data-ready="1"][data-anim="zoom"]:not(.in) { transform: scale(0.82); }
+.rv[data-ready="1"][data-anim="rise"]:not(.in) { transform: translateY(80px) rotate(4deg); }
+.rv[data-ready="1"][data-anim="spread"]:not(.in) { transform: translate(var(--sx, 0), var(--sy, 0)) scale(0.2) rotate(200deg); }
+.rv[data-ready="1"][data-anim="wipe"]:not(.in) { clip-path: inset(0 100% 0 0); opacity: 1; }
+.rv[data-anim="wipe"] { clip-path: inset(0 0 0 0); }
+@keyframes swing { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+.swing { transform-origin: 50% 0; animation: swing 5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .rv { transition: none; }
+  .rv[data-ready="1"]:not(.in) { opacity: 1; transform: none; clip-path: none; }
+  .swing { animation: none; }
+}
