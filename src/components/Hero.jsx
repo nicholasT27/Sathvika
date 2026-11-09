@@ -1,14 +1,14 @@
 import WavyFrame from "./WavyFrame";
 
 // Photo files go in public/founder/. Each frame uses a different expression and border colour.
-const frames = [
+export const frames = [
   { id: "f1", color: "#0ba0d6", src: "/founder/expression-1.svg", rot: -6, label: "Founder, smiling" },
   { id: "f2", color: "#ffe77e", src: "/founder/expression-2.svg", rot: 4, label: "Founder, laughing" },
   { id: "f3", color: "#e5362b", src: "/founder/expression-3.svg", rot: -3, label: "Founder, surprised" },
   { id: "f4", color: "#f26b2d", src: "/founder/expression-4.svg", rot: 6, label: "Founder, thinking" },
 ];
 
-const ticker = ["Branding", "Performance marketing", "Website design", "Marketing strategy", "Creative", "Content"];
+export const ticker = ["Branding", "Performance marketing", "Website design", "Marketing strategy", "Creative", "Content"];
 
 // Opening screen: the founder's photos in coloured wavy frames, a big headline and a scrolling banner.
 export default function Hero() {

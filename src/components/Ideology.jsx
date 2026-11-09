@@ -1,4 +1,4 @@
-const beliefs = [
+export const beliefs = [
   { text: "Boring is the only bad idea.", rot: -4, bg: "bg-red text-paper" },
   { text: "Strategy first, sparkle second.", rot: 3, bg: "bg-yellow text-ink" },
   { text: "Brands are people. Give them personality.", rot: -2, bg: "bg-blue text-paper" },

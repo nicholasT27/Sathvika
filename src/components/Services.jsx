@@ -1,7 +1,7 @@
 import Mascot from "./Mascot";
 
 // Simple drawn pictures for each service (swap for real photos any time).
-const icons = {
+export const icons = {
   branding: (<><circle cx="50" cy="50" r="26" fill="#ffe77e" stroke="#3b1410" strokeWidth="4" /><path d="M50 28 L56 44 L73 44 L59 54 L65 71 L50 61 L35 71 L41 54 L27 44 L44 44 Z" fill="#e5362b" stroke="#3b1410" strokeWidth="3" strokeLinejoin="round" /></>),
   performance: (<><rect x="20" y="58" width="14" height="22" fill="#ffe77e" stroke="#3b1410" strokeWidth="4" /><rect x="43" y="42" width="14" height="38" fill="#fff8e1" stroke="#3b1410" strokeWidth="4" /><rect x="66" y="22" width="14" height="58" fill="#e5362b" stroke="#3b1410" strokeWidth="4" /><path d="M20 38 L45 24 L60 30 L82 12" stroke="#3b1410" strokeWidth="4" fill="none" strokeLinecap="round" /></>),
   website: (<><rect x="14" y="22" width="72" height="54" rx="6" fill="#fff8e1" stroke="#3b1410" strokeWidth="4" /><path d="M14 36 h72" stroke="#3b1410" strokeWidth="4" /><circle cx="24" cy="29" r="3" fill="#e5362b" /><circle cx="34" cy="29" r="3" fill="#ffe77e" /><rect x="22" y="44" width="26" height="24" fill="#0ba0d6" stroke="#3b1410" strokeWidth="3" /><path d="M56 48 h22 M56 58 h22 M56 68 h14" stroke="#3b1410" strokeWidth="4" strokeLinecap="round" /></>),
@@ -10,7 +10,7 @@ const icons = {
   content: (<><rect x="24" y="18" width="52" height="64" rx="4" fill="#fff8e1" stroke="#3b1410" strokeWidth="4" /><path d="M34 32 h32 M34 44 h32 M34 56 h20" stroke="#3b1410" strokeWidth="4" strokeLinecap="round" /><path d="M62 82 l4 -12 l12 -6" stroke="#3b1410" strokeWidth="4" fill="none" /><circle cx="70" cy="66" r="8" fill="#e5362b" stroke="#3b1410" strokeWidth="3" /></>),
 };
 
-const services = [
+export const services = [
   { key: "branding", name: "Branding", line: "Logos, looks & a voice that sounds like you.", color: "#e5362b", price: "5¢" },
   { key: "performance", name: "Performance Marketing", line: "Ads that pay for themselves. Numbers go up.", color: "#0ba0d6", price: "8¢" },
   { key: "website", name: "Website Designing", line: "Sites that load fast and look unforgettable.", color: "#f26b2d", price: "10¢" },

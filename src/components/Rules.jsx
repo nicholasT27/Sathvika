@@ -1,4 +1,4 @@
-const rules = [
+export const rules = [
   ["Be bold.", "If you wouldn't screenshot it, we redo it.", "bg-sky", -2],
   ["Be honest.", "We tell you when an idea is not it. Kindly. With snacks.", "bg-yellow", 2],
   ["Be on time.", "Deadlines are the only rules we treat as serious.", "bg-orange text-paper", -1],
