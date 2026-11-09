@@ -1,6 +1,6 @@
 import ScrollBar from "./ScrollBar";
 import Reveal from "./Reveal";
-import Remote from "./Remote";
+import RemoteSection from "./RemoteSection";
 import CriminalsLine from "./CriminalsLine";
 import License from "./License";
 import Contact from "./Contact";
@@ -112,7 +112,7 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
       </section>
 
       {/* 4. Remote */}
-      <Reveal anim="zoom"><Remote /></Reveal>
+      <RemoteSection bg={theme === "calm" ? "bg-sky" : "bg-blue"} headStyle={hs} headClass={t.head} />
 
       {/* 5 and 6. Creative criminals and the creative licence */}
       <Reveal anim="flipx"><CriminalsLine /></Reveal>
@@ -139,7 +139,7 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
           <Reveal anim="left">
             <h2 style={hs} className={`text-3xl sm:text-5xl !text-ink ${t.head}`}>Services</h2>
             <p className="mt-4 max-w-sm">Everything your brand needs to grow, from the first logo to the last conversion.</p>
-            <div role="img" aria-label="A laptop on a desk in a bright workspace" className={`${photo} mt-8 aspect-[3/2]`} style={{ backgroundImage: "url(/images/remote.jpg)" }} />
+            <div role="img" aria-label="A bright open-plan workspace with plants and a long window" className={`${photo} mt-8 aspect-[3/2]`} style={{ backgroundImage: "url(/images/window-desk.jpg)" }} />
           </Reveal>
           <ul className="divide-y divide-ink/25">
             {services.map((s, n) => (

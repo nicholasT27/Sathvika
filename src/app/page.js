@@ -3,7 +3,7 @@ import ScrollBar from "@/components/ScrollBar";
 import Reveal from "@/components/Reveal";
 import HeroLayout from "@/components/HeroLayout";
 import WavyFrame from "@/components/WavyFrame";
-import Remote from "@/components/Remote";
+import RemoteSection from "@/components/RemoteSection";
 import CriminalsLine from "@/components/CriminalsLine";
 import License from "@/components/License";
 import Contact from "@/components/Contact";
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* 4. Remote */}
-      <div className="scallop-top" style={{ "--fill": "var(--blue)" }}><Reveal anim="right"><Remote /></Reveal></div>
+      <div className="scallop-top" style={{ "--fill": "var(--sky)" }}><RemoteSection bg="bg-sky" /></div>
 
       {/* 5. Creative criminals: the quirky lineup */}
       <div className="scallop-top" style={{ "--fill": "var(--ink)" }}><Reveal anim="flipx"><CriminalsLine /></Reveal></div>
