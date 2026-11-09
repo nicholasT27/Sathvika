@@ -1,6 +1,6 @@
 // Clean line icons for digital marketing. Big ones (48 grid) are used on service cards, small ones (24 grid) in the strip.
 const big = {
-  branding: (<><path d="M24 4 L33 18 L24 44 L15 18 Z" /><circle cx="24" cy="21" r="3.2" /><path d="M24 24 V36" /></>),
+  branding: (<><circle cx="18" cy="19" r="11" /><circle cx="30" cy="19" r="11" /><circle cx="24" cy="30" r="11" /><circle cx="24" cy="23" r="2" fill="currentColor" /></>),
   performance: (<><path d="M6 6 V42 H42" /><path d="M12 33 L21 23 L28 29 L40 15" /><path d="M32 15 H40 V23" /><circle cx="21" cy="23" r="1.6" fill="currentColor" /><circle cx="28" cy="29" r="1.6" fill="currentColor" /></>),
   website: (<><rect x="5" y="8" width="38" height="32" rx="4" /><path d="M5 17 H43" /><circle cx="10" cy="12.5" r="1.1" fill="currentColor" /><circle cx="14.5" cy="12.5" r="1.1" fill="currentColor" /><rect x="10" y="22" width="12" height="12" rx="1.5" /><path d="M27 23 H38 M27 29 H38 M27 35 H33" /></>),
   strategy: (<><circle cx="22" cy="26" r="16" /><circle cx="22" cy="26" r="9" /><circle cx="22" cy="26" r="2" fill="currentColor" /><path d="M23.5 24.5 L40 8 M33 8 H40 V15" /></>),

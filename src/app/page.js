@@ -3,7 +3,6 @@ import ScrollBar from "@/components/ScrollBar";
 import Reveal from "@/components/Reveal";
 import HeroLayout from "@/components/HeroLayout";
 import WavyFrame from "@/components/WavyFrame";
-import Mascot from "@/components/Mascot";
 import Remote from "@/components/Remote";
 import CriminalsLine from "@/components/CriminalsLine";
 import License from "@/components/License";
@@ -17,7 +16,7 @@ export const metadata = {
 };
 
 // The founder's photo. Replace this file (or change the path) with the real picture.
-const FOUNDER_PHOTO = "/founder/founder.svg";
+const FOUNDER_PHOTO = "/images/founder.jpg";
 
 const channels = [["seo", "SEO"], ["social", "Social media"], ["ads", "Paid ads"], ["email", "Email"], ["analytics", "Analytics"]];
 
@@ -55,14 +54,10 @@ export default function Home() {
           intro={<p className="max-w-sm text-lg">Branding, performance marketing, websites and content for brands that want to be noticed.</p>}
           photo={
             <div className="h-full grid place-items-center">
-              <div className="w-full max-w-md"><WavyFrame id="home-founder" color="var(--red)" src={FOUNDER_PHOTO} label="Sathvika, founder of the agency" bumps={12} className="drop-shadow-[0_14px_24px_rgba(106,58,51,0.3)]" /></div>
+              <div className="w-full max-w-md"><WavyFrame id="home-founder" color="var(--red)" src={FOUNDER_PHOTO} label="Sathvika, founder of the agency" bumps={12} focus="xMidYMin" className="drop-shadow-[0_14px_24px_rgba(106,58,51,0.3)]" /></div>
             </div>
           }
-          tile={
-            <div className="bg-paper rounded-3xl h-64 md:h-full md:min-h-[14rem] grid place-items-center text-center p-4">
-              <div><Mascot mood="happy" className="h-40 md:h-44 mx-auto" /><p className="mt-2 text-sm font-semibold">Penny, our chief idea officer</p></div>
-            </div>
-          }
+          tile={<div role="img" aria-label="A creative team planning a campaign on a whiteboard" className="rounded-3xl h-64 md:h-full md:min-h-[14rem] bg-cover bg-center" style={{ backgroundImage: "url(/images/team.jpg)" }} />}
         />
         <Reveal anim="rise" delay={0.2} className="mx-auto max-w-6xl mt-10">
           <ul className="flex flex-wrap items-center gap-3">
@@ -84,6 +79,7 @@ export default function Home() {
             <p className="mt-3 text-lg max-w-xl">We&apos;re a small team on purpose. When you work with us, you work with me.</p>
           </Reveal>
           <Reveal anim="right">
+            <div role="img" aria-label="Marketing analytics dashboard on a laptop" className="h-56 rounded-2xl bg-cover bg-center mb-5" style={{ backgroundImage: "url(/images/analytics.jpg)" }} />
             <dl className={`${card} p-6 divide-y divide-ink/10`}>
               {[["Focus", "Brand and performance, together"], ["Approach", "Strategy first, then the creative"], ["Fuel", "Filter coffee, mostly"]].map(([k, v]) => (
                 <div key={k} className="py-3 first:pt-0 last:pb-0"><dt className="text-xs font-semibold uppercase tracking-[0.18em] text-red">{k}</dt><dd className="mt-1 text-lg">{v}</dd></div>

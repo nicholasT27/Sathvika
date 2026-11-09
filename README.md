@@ -22,3 +22,7 @@ npm run lint     # code checks
 - **Colours:** change them at the top of `src/app/globals.css` (pink is kept to tiny accents on purpose).
 - **Mascot (Penny):** drawn in `src/components/Mascot.jsx`; replace with the real artwork whenever ready.
 - **Contact form:** only plays the "postcard sent" animation. Nothing is sent until a backend is added.
+
+## Photos
+The photos in `public/images/` are free-to-use stock images from Unsplash, used as stand-ins:
+`founder.jpg` (replace with the real founder photo), `team.jpg`, `analytics.jpg`.
