@@ -6,6 +6,7 @@ const options = [
   ["/designs/summit-cascade", "Hero · Cascade (new)", "Calm look. Four founder photos step down a staircase, overlapping and slanted, like the Wayo Girl reference.", "bg-sky"],
   ["/designs/summit-quad", "Hero · Quad (new)", "Bold look. Four pastel squares (blue, mint, pink, yellow), each with a flower-framed photo and a headline card in the middle.", "bg-yellow"],
   ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
+  ["/designs/remote-checks", "Remote · Checkered frame variations (new)", "Three takes on the chosen checkered-frame door: sunny, tilted with a starburst, and reversed in blue.", "bg-sky"],
   ["/designs/remote", "Remote section · 3 designs (new)", "Only the Remote section: the arch window from the client reference as a door with a knob, in three layouts.", "bg-blue"],
   ["/designs/pop", "Style 1 · Sticker Pop (new)", "Same layout, no journal look: thick outlines, hard shadows, slanted ribbons and round stickers.", "bg-orange"],
   ["/designs/postage", "Style 2 · Postage Stamp (new)", "Same layout as an airmail envelope: perforated stamps, ticket stubs, lined letter paper.", "bg-sky"],
