@@ -3,6 +3,9 @@ import Link from "next/link";
 const options = [
   ["/designs/summit-calm", "Summit layout · Calm (new)", "Centred-logo menu, collage hero, ticker, two-tone split panels, pattern borders. Quiet and elegant.", "bg-blue"],
   ["/designs/summit-bold", "Summit layout · Bold (new)", "Same editorial layout with louder colour, chunky headings and checks.", "bg-yellow"],
+  ["/designs/summit-cascade", "Hero · Cascade (new)", "Calm look. Four founder photos step down a staircase, overlapping and slanted, like the Wayo Girl reference.", "bg-sky"],
+  ["/designs/summit-quad", "Hero · Quad (new)", "Bold look. Four pastel squares (blue, mint, pink, yellow), each with a flower-framed photo and a headline card in the middle.", "bg-yellow"],
+  ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
   ["/designs/pop", "Style 1 · Sticker Pop (new)", "Same layout, no journal look: thick outlines, hard shadows, slanted ribbons and round stickers.", "bg-orange"],
   ["/designs/postage", "Style 2 · Postage Stamp (new)", "Same layout as an airmail envelope: perforated stamps, ticket stubs, lined letter paper.", "bg-sky"],
   ["/designs/collage", "Style 3 · Wavy Collage (chosen, same as home)", "Chosen design, refined for an agency: clean cards, digital-marketing icons.", "bg-yellow"],

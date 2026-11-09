@@ -29,4 +29,4 @@ The photos in `public/images/` are free-to-use stock images from Unsplash, used 
 
 ## Founder photos in the hero
 The hero shows four founder photos with different expressions in coloured rounded frames (blue, mint, pink, yellow), slanted like the client's references.
-Replace `public/images/founder-1.jpg` to `founder-4.jpg` with the real photos. The current files are stand-in crops of one stock photo.
+Replace `public/images/founder-1.jpg` to `founder-4.jpg` with the real photos. The current files are four different stock portraits (thinking, joyful, confident, laughing) used as stand-ins.

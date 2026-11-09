@@ -6,6 +6,7 @@ import License from "./License";
 import Contact from "./Contact";
 import { Icon } from "./Icons";
 import { rules } from "./Rules";
+import { FanHero, CascadeHero, QuadHero, RowHero } from "./HeroVariants";
 import { beliefs, services, tickerWords } from "@/data/content";
 
 // Two looks for the same layout. "calm" is quiet and elegant; "bold" is louder and more playful.
@@ -22,14 +23,6 @@ const themes = {
   },
 };
 
-// Four founder photos (different expressions), each in a rounded card in the colour combo from the brief.
-// Replace public/images/founder-1.jpg ... founder-4.jpg with the real photos.
-const founderCards = [
-  { src: "/images/founder-1.jpg", color: "#a9cde0", label: "Smiling", rot: -7, pos: { left: "0%", top: "3%" }, tape: true },
-  { src: "/images/founder-2.jpg", color: "#b7ddc8", label: "Laughing", rot: 5, pos: { right: "0%", top: "0%" } },
-  { src: "/images/founder-3.jpg", color: "#f7b9c6", label: "Thinking", rot: 4, pos: { left: "3%", top: "47%" } },
-  { src: "/images/founder-4.jpg", color: "#fbe08a", label: "Winking", rot: -5, pos: { right: "0%", top: "45%" }, tape: true },
-];
 const nav = [["About", "#founder"], ["Ideology", "#ideology"], ["Remote", "#remote"], ["Criminals", "#criminals"], ["Rules", "#rules"], ["Services", "#services"], ["Contact", "#contact"]];
 const small = "text-[11px] sm:text-xs font-semibold uppercase tracking-[0.28em]";
 
@@ -44,8 +37,8 @@ function Seal({ text, className = "" }) {
   );
 }
 
-// The whole Summit-style page. Pass theme="calm" or theme="bold".
-export default function SummitSite({ theme = "calm" }) {
+// The whole Summit-style page. Pass theme="calm" or "bold", and hero="fan", "cascade", "quad" or "row".
+export default function SummitSite({ theme = "calm", hero = "fan" }) {
   const t = themes[theme];
   const photo = `${t.photo} bg-cover bg-center`;
   // The calm look uses the lighter body font for headings; the bold look keeps the chunky heading font.
@@ -71,36 +64,8 @@ export default function SummitSite({ theme = "calm" }) {
         </nav>
       </header>
 
-      {/* 1. Collage hero with the founder photo */}
-      <section id="top" className="px-5 pt-10 pb-12">
-        <div className="mx-auto max-w-6xl grid md:grid-cols-[0.65fr_1.1fr_1.25fr] gap-6 items-center">
-          <Reveal anim="left" className="order-2 md:order-1">
-            <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
-              <div role="img" aria-label="Latte art on a cafe table with plants" className={`${photo} h-56 md:h-64 md:w-3/4`} style={{ backgroundImage: "url(/images/latte.jpg)" }} />
-              <div role="img" aria-label="Social media apps on a phone" className={`${photo} h-56 md:h-48 md:-mr-6`} style={{ backgroundImage: "url(/images/social.jpg)" }} />
-            </div>
-          </Reveal>
-          <Reveal anim="drop" className="order-1 md:order-2 text-center relative z-10 md:-mr-16">
-            <p className={`${small} text-ink/70`}>Meet Sathvika · Founder · Many moods</p>
-            <h1 style={hs} className={`mt-4 text-4xl sm:text-6xl leading-[1.15] ${t.head}`}>Thoughtfully<br />crafted<br />campaigns</h1>
-            <p className="mt-5 max-w-sm mx-auto">Branding, performance marketing, websites and content for brands that want to be noticed.</p>
-            <a href="#founder" className="btn bg-red text-paper mt-7 text-sm">Meet the founder</a>
-          </Reveal>
-          <div className="order-3 relative h-[31rem] sm:h-[35rem] md:h-[37rem]">
-            {founderCards.map((c, i) => (
-              <Reveal key={c.src} anim="drop" delay={0.14 * i} className="absolute w-[52%]" style={c.pos}>
-                <figure className="relative" style={{ transform: `rotate(${c.rot}deg)` }}>
-                  {c.tape && <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-paper/80 border border-ink/10 z-10 rotate-3" aria-hidden="true" />}
-                  <div className="rounded-[1.5rem] p-2.5 shadow-[0_12px_28px_rgba(106,58,51,0.25)]" style={{ background: c.color }}>
-                    <div role="img" aria-label={`Sathvika, founder of the agency (${c.label.toLowerCase()})`} className="aspect-[4/5] rounded-2xl bg-cover bg-center" style={{ backgroundImage: `url(${c.src})` }} />
-                    <figcaption className={`${small} text-center pt-2 pb-0.5 text-ink`}>{c.label}</figcaption>
-                  </div>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 1. Hero with the founder photos (design chosen by the "hero" prop) */}
+      {hero === "cascade" ? <CascadeHero t={{ ...t, hs }} /> : hero === "quad" ? <QuadHero /> : hero === "row" ? <RowHero t={{ ...t, hs }} /> : <FanHero t={{ ...t, hs }} />}
 
       {/* Ticker */}
       <div className={`${t.ticker} overflow-hidden`}>
