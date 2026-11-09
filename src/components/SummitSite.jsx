@@ -22,7 +22,14 @@ const themes = {
   },
 };
 
-const FOUNDER_PHOTO = "/images/founder.jpg";
+// Four founder photos (different expressions), each in a rounded card in the colour combo from the brief.
+// Replace public/images/founder-1.jpg ... founder-4.jpg with the real photos.
+const founderCards = [
+  { src: "/images/founder-1.jpg", color: "#a9cde0", label: "Smiling", rot: -7, pos: { left: "0%", top: "3%" }, tape: true },
+  { src: "/images/founder-2.jpg", color: "#b7ddc8", label: "Laughing", rot: 5, pos: { right: "0%", top: "0%" } },
+  { src: "/images/founder-3.jpg", color: "#f7b9c6", label: "Thinking", rot: 4, pos: { left: "3%", top: "47%" } },
+  { src: "/images/founder-4.jpg", color: "#fbe08a", label: "Winking", rot: -5, pos: { right: "0%", top: "45%" }, tape: true },
+];
 const nav = [["About", "#founder"], ["Ideology", "#ideology"], ["Remote", "#remote"], ["Criminals", "#criminals"], ["Rules", "#rules"], ["Services", "#services"], ["Contact", "#contact"]];
 const small = "text-[11px] sm:text-xs font-semibold uppercase tracking-[0.28em]";
 
@@ -66,7 +73,7 @@ export default function SummitSite({ theme = "calm" }) {
 
       {/* 1. Collage hero with the founder photo */}
       <section id="top" className="px-5 pt-10 pb-12">
-        <div className="mx-auto max-w-6xl grid md:grid-cols-[0.8fr_1.35fr_1fr] gap-6 items-center">
+        <div className="mx-auto max-w-6xl grid md:grid-cols-[0.65fr_1.1fr_1.25fr] gap-6 items-center">
           <Reveal anim="left" className="order-2 md:order-1">
             <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
               <div role="img" aria-label="Latte art on a cafe table with plants" className={`${photo} h-56 md:h-64 md:w-3/4`} style={{ backgroundImage: "url(/images/latte.jpg)" }} />
@@ -74,17 +81,24 @@ export default function SummitSite({ theme = "calm" }) {
             </div>
           </Reveal>
           <Reveal anim="drop" className="order-1 md:order-2 text-center relative z-10 md:-mr-16">
-            <p className={`${small} text-ink/70`}>Meet Sathvika · Founder</p>
+            <p className={`${small} text-ink/70`}>Meet Sathvika · Founder · Many moods</p>
             <h1 style={hs} className={`mt-4 text-4xl sm:text-6xl leading-[1.15] ${t.head}`}>Thoughtfully<br />crafted<br />campaigns</h1>
             <p className="mt-5 max-w-sm mx-auto">Branding, performance marketing, websites and content for brands that want to be noticed.</p>
             <a href="#founder" className="btn bg-red text-paper mt-7 text-sm">Meet the founder</a>
           </Reveal>
-          <Reveal anim="right" className="order-3">
-            <div className="relative">
-              <div role="img" aria-label="Sathvika, founder of the agency" className={`${photo} aspect-[3/4] w-full`} style={{ backgroundImage: `url(${FOUNDER_PHOTO})`, backgroundPosition: "50% 20%" }} />
-              <span className={`${small} absolute left-3 bottom-3 bg-paper px-3 py-1`}>Sathvika, Founder</span>
-            </div>
-          </Reveal>
+          <div className="order-3 relative h-[31rem] sm:h-[35rem] md:h-[37rem]">
+            {founderCards.map((c, i) => (
+              <Reveal key={c.src} anim="drop" delay={0.14 * i} className="absolute w-[52%]" style={c.pos}>
+                <figure className="relative" style={{ transform: `rotate(${c.rot}deg)` }}>
+                  {c.tape && <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-paper/80 border border-ink/10 z-10 rotate-3" aria-hidden="true" />}
+                  <div className="rounded-[1.5rem] p-2.5 shadow-[0_12px_28px_rgba(106,58,51,0.25)]" style={{ background: c.color }}>
+                    <div role="img" aria-label={`Sathvika, founder of the agency (${c.label.toLowerCase()})`} className="aspect-[4/5] rounded-2xl bg-cover bg-center" style={{ backgroundImage: `url(${c.src})` }} />
+                    <figcaption className={`${small} text-center pt-2 pb-0.5 text-ink`}>{c.label}</figcaption>
+                  </div>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

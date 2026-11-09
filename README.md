@@ -26,3 +26,7 @@ npm run lint     # code checks
 ## Photos
 The photos in `public/images/` are free-to-use stock images from Unsplash, used as stand-ins:
 `founder.jpg` (replace with the real founder photo), `team.jpg`, `analytics.jpg`.
+
+## Founder photos in the hero
+The hero shows four founder photos with different expressions in coloured rounded frames (blue, mint, pink, yellow), slanted like the client's references.
+Replace `public/images/founder-1.jpg` to `founder-4.jpg` with the real photos. The current files are stand-in crops of one stock photo.
