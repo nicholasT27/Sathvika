@@ -133,3 +133,6 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
   .letter { opacity: 1; }
   .in-view .letter, .in-view .wobble, .slide-up, .fill-bar { animation: none; }
 }
+@keyframes slideUpFlat { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.slide-up-flat { animation: slideUpFlat 0.5s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .slide-up-flat { animation: none; } }

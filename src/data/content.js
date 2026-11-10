@@ -16,3 +16,11 @@ export const services = [
 ];
 
 export const tickerWords = ["Branding", "Performance Marketing", "Website Designing", "Marketing Strategy", "Creative", "Content"];
+
+// One photo per belief, used by the rotating ideology designs.
+export const ideologyPhotos = [
+  { src: "/images/social.jpg", alt: "Social media apps on a phone", note: "Standing out in the feed" },
+  { src: "/images/analytics.jpg", alt: "A marketing analytics dashboard on a laptop", note: "Numbers behind every idea" },
+  { src: "/images/cheers.jpg", alt: "Two coffee cups clinking over a cafe table", note: "People talking to people" },
+  { src: "/images/latte.jpg", alt: "Latte art on a cafe table with plants", note: "Finishing touches matter" },
+];
