@@ -2,6 +2,7 @@
 import { useState } from "react";
 import useRotator from "./useRotator";
 import { Icon } from "./Icons";
+import Mascot from "./Mascot";
 import { services, serviceExtras } from "@/data/content";
 
 // Each service joined with its photo and bullet points.
@@ -39,6 +40,10 @@ export function StampServices() {
   );
 }
 
+// Penny, the mascot, pulls a different face and says something different for each service page.
+const pennyMoods = ["wink", "shock", "happy", "smug", "wink", "happy"];
+const pennyQuips = ["Looks good, doesn't it?", "Numbers never lie. Mostly.", "Pixels? Perfected.", "Plan first. Panic never.", "Colour outside the lines!", "Words that wiggle."];
+
 // Design 2, "Book": an open book. The contents are on the left page, and the right page turns to each service in turn.
 export function BookServices() {
   const { active, setActive, ref, hoverProps } = useRotator(items.length, 6000);
@@ -73,6 +78,11 @@ export function BookServices() {
           <p className="mt-5 text-lg">{s.line}</p>
           <ul className="mt-3 space-y-1 text-sm">{s.points.map((p) => <li key={p} className="flex gap-2"><span className="text-red" aria-hidden="true">✓</span>{p}</li>)}</ul>
           <p className="mt-6 text-right text-sm text-ink/60">— {active + 1} —</p>
+        </div>
+        {/* Penny sits beside the book on wide screens and under it on phones */}
+        <div className="md:absolute md:-right-24 lg:-right-28 md:bottom-2 z-20 flex md:block justify-center items-end gap-3 pb-4 md:pb-0 col-span-full">
+          <p key={`q${active}`} className="relative slide-up-flat bg-white border-[3px] border-ink rounded-2xl px-3 py-2 text-sm font-semibold max-w-[10rem] mb-2 md:mb-2 md:-ml-6 shadow-[3px_3px_0_var(--ink)]">{pennyQuips[active]}</p>
+          <div className="w-24 md:w-28 bob"><Mascot mood={pennyMoods[active]} steam={false} className="w-full" /></div>
         </div>
       </div>
     </div>

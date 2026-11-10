@@ -13,7 +13,7 @@ export default function ServicesDesigns() {
     <main className="soft bg-paper overflow-x-clip">
       <Label>Services · 1 · Postage stamps</Label>
       <section id="services" className="bg-sky px-5 py-20 sm:py-28"><Reveal anim="rise"><StampServices /></Reveal></section>
-      <Label>Services · 2 · Book</Label>
+      <Label>Services · 2 · Book with Penny</Label>
       <section className="bg-butter px-5 py-20 sm:py-28"><Reveal anim="rise"><BookServices /></Reveal></section>
       <Label>Services · 3 · Shopping basket</Label>
       <section className="bg-yellow px-5 py-20 sm:py-28"><Reveal anim="rise"><BasketServices /></Reveal></section>
