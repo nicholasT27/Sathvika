@@ -33,3 +33,6 @@ Replace `public/images/founder-1.jpg` to `founder-4.jpg` with the real photos. T
 
 ## Remote section
 `src/components/RemoteSection.jsx` is the real Remote section: words on the left, one arch door on the right that opens to a computer photo (`public/images/remote.jpg`). It is used on the home page and on the Summit layouts.
+
+## Main website
+The home page (`src/app/page.js`) renders `SummitSite` with `theme="calm"` and `hero="fan"`. Change those two words to switch look (`calm` or `bold`) or hero (`fan`, `cascade`, `quad`, `row`). The previous home page is kept at `/designs/collage`, and all other design options are listed at `/designs`.
