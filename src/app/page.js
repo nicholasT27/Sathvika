@@ -7,5 +7,5 @@ export const metadata = {
 
 // The main website. To change the look, switch theme between "calm" and "bold", and hero between "fan", "cascade", "quad" and "row".
 export default function Home() {
-  return <SummitSite theme="calm" hero="fan" />;
+  return <SummitSite theme="bold" hero="row" />;
 }

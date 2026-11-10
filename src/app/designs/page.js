@@ -14,7 +14,7 @@ const options = [
   ["/designs/pop", "Style 1 · Sticker Pop (new)", "Same layout, no journal look: thick outlines, hard shadows, slanted ribbons and round stickers.", "bg-orange"],
   ["/designs/postage", "Style 2 · Postage Stamp (new)", "Same layout as an airmail envelope: perforated stamps, ticket stubs, lined letter paper.", "bg-sky"],
   ["/designs/collage", "Wavy Collage (previous home page)", "The earlier home page: clean cards, digital-marketing icons.", "bg-yellow"],
-  ["/", "★ Home page: Summit layout (Calm, Fan hero)", "The main website now: centred-logo menu, four founder photos, door Remote section.", "bg-yellow"],
+  ["/", "★ Home page: Summit layout (Bold, Row hero)", "The main website now: headline and button on top, four rounded founder cards in a row, door Remote section.", "bg-yellow"],
   ["/designs/polaroid-line", "E2 · Clothesline", "Previous pick: pegged polaroids on a washing line.", "bg-sky"],
   ["/designs/framed", "A · Framed Panels", "Thin red frame with chunky rounded panels. Calm and clean.", "bg-blue"],
   ["/designs/scrapbook", "B · Scrapbook", "Soft pink table, tilted cards, cloud blobs and floating tags.", "bg-pink"],
