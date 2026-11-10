@@ -6,6 +6,7 @@ const options = [
   ["/designs/summit-cascade", "Hero · Cascade (new)", "Calm look. Four founder photos step down a staircase, overlapping and slanted, like the Wayo Girl reference.", "bg-sky"],
   ["/designs/summit-quad", "Hero · Quad (new)", "Bold look. Four pastel squares (blue, mint, pink, yellow), each with a flower-framed photo and a headline card in the middle.", "bg-yellow"],
   ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
+  ["/designs/criminals", "Creative Criminals with the mascot · 3 designs (new)", "Police lineup with camera flashes, a catch-Penny game, and a detective corkboard.", "bg-red"],
   ["/designs/services", "Services · 4 designs (new)", "Postage stamps, a book you page through, a shopping basket you fill, and vintage newspaper coupons you clip.", "bg-sky"],
   ["/designs/ideology-night", "Ideology Night · 3 variations (new)", "Spotlight, neon sign with scrolling words, and a cinema screen with subtitles. All auto-rotate.", "bg-ink text-butter"],
   ["/designs/ideology-stage", "Ideology Stage · 3 takes (new)", "Night stage with a glowing arch, triple-arch slider, and an outline-type list. All auto-rotate.", "bg-ink text-butter"],

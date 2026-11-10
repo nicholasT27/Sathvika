@@ -143,3 +143,9 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
 @keyframes clipPop { 0% { transform: scale(1) rotate(0); } 40% { transform: scale(1.06) rotate(-2deg); } 100% { transform: scale(1) rotate(-1.5deg); } }
 .clip-pop { animation: clipPop 0.5s ease-out both; }
 @media (prefers-reduced-motion: reduce) { .page-in, .clip-pop { animation: none; } }
+
+/* Police siren lights and the camera flash for the Creative Criminals section. */
+@keyframes siren { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.9; } }
+.siren-a { animation: siren 1s ease-in-out infinite; }
+.siren-b { animation: siren 1s ease-in-out infinite 0.5s; }
+@media (prefers-reduced-motion: reduce) { .siren-a, .siren-b { animation: none; opacity: 0.6; } }
