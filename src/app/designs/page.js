@@ -8,7 +8,7 @@ const options = [
   ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
   ["/designs/layout-launcher", "Whole-page Layout G · Launcher (new)", "The hero, then a grid of chapter tiles; each opens as a full-screen page with a close button.", "bg-red"],
   ["/designs/layout-split", "Whole-page Layout H · Split screen (new)", "A sticky left half shows the current chapter number, name and colour while the right half scrolls.", "bg-ink text-butter"],
-  ["/designs/layout-waves", "Whole-page Layout I · Wave flow (new)", "Colour bands flow into each other through soft wave dividers, with a progress ring that follows you.", "bg-sky"],
+  ["/designs/layout-waves", "Whole-page Layout I · Checks flow", "Colour bands step into each other through checks dividers, with a progress ring that follows you.", "bg-sky"],
   ["/designs/layout-chapters", "Whole-page Layout D · Chapter title bands (new)", "A big numbered title band opens every chapter, so each section starts the same way.", "bg-orange"],
   ["/designs/layout-tabs", "Whole-page Layout E · Tab dock (new)", "One chapter on screen at a time with a bottom tab dock, arrow keys and links that switch chapters.", "bg-sky"],
   ["/designs/layout-journey", "Whole-page Layout F · Journey line (new)", "A dashed line down the left with a numbered stop at every chapter.", "bg-butter"],

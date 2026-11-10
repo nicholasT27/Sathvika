@@ -9,10 +9,10 @@ const small = "text-[11px] font-semibold uppercase tracking-[0.2em]";
 const blurbs = ["The face behind the chaos", "A quick hello from the founder", "Four beliefs behind every brief", "How we work, from anywhere", "Our mascot, brought in for questioning", "Fully (un)official paperwork", "House rules, not legally binding", "Everything your brand needs to grow", "Send us a postcard"];
 
 // The chapters in order, ready to drop into a layout. Chapter 0 is the hero with the ticker.
-function chapterElements(full = false) {
+function chapterElements(full = false, strips = true) {
   return [
     <div key="0" className="bg-yellow pt-6"><HeroSection /><Ticker /></div>,
-    <FounderSection key="1" full={full} />, <IdeologySection key="2" full={full} />, <RemoteChapter key="3" bg="bg-sky" full={full} />, <CriminalsSection key="4" full={full} />,
+    <FounderSection key="1" full={full} />, <IdeologySection key="2" full={full} strips={strips} />, <RemoteChapter key="3" bg="bg-sky" full={full} />, <CriminalsSection key="4" full={full} />,
     <LicenceChapter key="5" full={full} />, <RulesSection key="6" bg="bg-butter" full={full} />, <ServicesSection key="7" bg="bg-sky" full={full} />, <ContactChapter key="8" full={full} />,
   ];
 }
@@ -139,21 +139,19 @@ export function SplitLayout() {
   );
 }
 
-// A soft wave between two bands: it sits on the band above and is painted in the colour of the band below.
-function Wave({ from, to, flip = false }) {
+// A checks divider between two bands: two rows of squares in the colour of the band below, sitting on the colour of the band above, so one section steps into the next.
+function Wave({ from, to }) {
   return (
-    <div className="relative -mb-px leading-[0]" style={{ background: from }} aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className={`w-full h-10 sm:h-16 ${flip ? "scale-x-[-1]" : ""}`}><path d="M0 40 C 240 100, 480 -10, 720 40 S 1200 100, 1440 30 L1440 90 L0 90 Z" style={{ fill: to }} /></svg>
-    </div>
+    <div className="-mb-px" aria-hidden="true" style={{ height: "56px", backgroundColor: from, backgroundImage: `conic-gradient(${to} 25%, transparent 0 50%, ${to} 0 75%, transparent 0)`, backgroundSize: "56px 56px" }} />
   );
 }
 
 const waveColors = ["var(--yellow)", "var(--butter)", "#22344f", "var(--sky)", "#2a1613", "var(--yellow)", "var(--butter)", "var(--sky)", "var(--orange)"];
 
-// Layout I: the colours flow into each other through soft wave dividers, with a small progress ring that follows you.
+// Layout I: the colours step into each other through checks dividers, with a small progress ring that follows you.
 export function WavesLayout() {
   const active = useActiveChapter(null);
-  const els = chapterElements();
+  const els = chapterElements(false, false);
   const r = 18, c = 2 * Math.PI * r;
   return (
     <main className="soft bg-paper overflow-x-clip">
@@ -167,7 +165,7 @@ export function WavesLayout() {
       </header>
       {els.map((e, i) => (
         <div key={i}>
-          {i > 0 && <Wave from={waveColors[i - 1]} to={waveColors[i]} flip={i % 2 === 0} />}
+          {i > 0 && <Wave from={waveColors[i - 1]} to={waveColors[i]} />}
           {e}
         </div>
       ))}

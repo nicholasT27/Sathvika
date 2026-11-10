@@ -29,13 +29,13 @@ export function Ticker() {
 export function FounderSection({ full = false }) { return <FounderOnly bold className={full ? scene : ""} />; }
 
 // Chapter 3: our ideology on the rotating stage. "tone" sets the band colour.
-export function IdeologySection({ full = false, tone = "bg-[#22344f]" }) {
+export function IdeologySection({ full = false, tone = "bg-[#22344f]", strips = true }) {
   return (
     <ComboSection start="blue" switcher={false}>
       <section id="ideology" className={`${tone} relative ${full ? "min-h-screen flex flex-col justify-between [&>*]:w-full" : ""}`}>
-        <div className="checks h-8 sm:h-12" aria-hidden="true" />
+        {strips && <div className="checks h-8 sm:h-12" aria-hidden="true" />}
         <div className="px-5 sm:px-14 py-16 sm:py-24 overflow-hidden my-auto"><Reveal anim="rise"><NightStage /></Reveal></div>
-        <div className="checks h-8 sm:h-12" aria-hidden="true" />
+        {strips && <div className="checks h-8 sm:h-12" aria-hidden="true" />}
       </section>
     </ComboSection>
   );
