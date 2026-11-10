@@ -8,7 +8,7 @@ const bar = (key, cls = "bg-red") => <span key={key} className={`fill-bar absolu
 const num = (i) => String(i + 1).padStart(2, "0");
 
 // A photo in an arch-shaped window that cross-fades to the active belief's picture.
-function ArchPhoto({ active, className = "", frame = "border-ink shadow-[8px_8px_0_rgba(106,58,51,0.35)]" }) {
+export function ArchPhoto({ active, className = "", frame = "border-ink shadow-[8px_8px_0_rgba(106,58,51,0.35)]" }) {
   return (
     <div className={`relative aspect-[3/4] rounded-t-[999px] overflow-hidden border-[5px] ${frame} ${className}`}>
       {photos.map((p, i) => <div key={p.src} role="img" aria-label={p.alt} aria-hidden={active !== i} className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${active === i ? "opacity-100 scale-100" : "opacity-0 scale-110"}`} style={{ backgroundImage: `url(${p.src})` }} />)}
