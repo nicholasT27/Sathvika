@@ -36,3 +36,6 @@ Replace `public/images/founder-1.jpg` to `founder-4.jpg` with the real photos. T
 
 ## Main website
 The home page (`src/app/page.js`) renders `SummitSite` with `theme="bold"` and `hero="row"`. Change those two words to switch look (`calm` or `bold`) or hero (`fan`, `cascade`, `quad`, `row`). The previous home page is kept at `/designs/collage`, and all other design options are listed at `/designs`.
+
+## Main website (current)
+The home page (`src/app/page.js`) now renders the "Checks flow" layout (`WavesLayout` in `src/components/LayoutMore.jsx`). The earlier home page (`SummitSite` with `theme="bold"` and `hero="row"`) is kept at `/designs/summit-row`. All layout options are listed at `/designs`.

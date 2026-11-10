@@ -1,11 +1,12 @@
-import SummitSite from "@/components/SummitSite";
+import { WavesLayout } from "@/components/LayoutMore";
 
 export const metadata = {
   title: "Sathvika | Creative Marketing Agency",
   description: "Branding, performance marketing, website design, strategy and content for brands that want to be noticed.",
 };
 
-// The main website. To change the look, switch theme between "calm" and "bold", and hero between "fan", "cascade", "quad" and "row".
+// The main website: the "Checks flow" layout (colour bands step into each other through checks dividers, with a chapter progress badge).
+// The previous home page (centred-logo menu) is still available at /designs/summit-row.
 export default function Home() {
-  return <SummitSite theme="bold" hero="row" />;
+  return <WavesLayout />;
 }
