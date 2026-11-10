@@ -31,8 +31,8 @@ export function LineupCriminals() {
       </div>
       <ul className="relative mt-12 grid grid-cols-2 lg:grid-cols-4 gap-5">
         {crimes.map((c, i) => (
-          <li key={c.id}>
-            <button onClick={() => snap(i)} aria-label={`Take mugshot ${c.id}`} className="relative block w-full text-left bg-[#fffaf0] text-ink border-[4px] border-[#f8efdc] p-2 pb-3 shadow-[0_14px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition">
+          <li key={c.id} className="h-full">
+            <button onClick={() => snap(i)} aria-label={`Take mugshot ${c.id}`} className="relative flex flex-col h-full w-full text-left bg-[#fffaf0] text-ink border-[4px] border-[#f8efdc] p-2 pb-3 shadow-[0_14px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition">
               <span className="relative block h-60 bg-sky overflow-hidden px-3 pt-1">
                 {[...Array(6)].map((_, n) => <span key={n} className="absolute left-0 right-0 border-t-2 border-ink/25" style={{ top: `${14 + n * 14}%` }}><span className="absolute left-1 -top-4 text-[10px] text-ink/60">{6 - n}ft</span></span>)}
                 <Mascot mood={c.mood} steam={false} className="relative h-full w-auto mx-auto" />
@@ -40,7 +40,7 @@ export function LineupCriminals() {
                 <span className={`absolute inset-0 bg-white transition-opacity duration-200 ${flash === i ? "opacity-100" : "opacity-0"}`} aria-hidden="true" />
               </span>
               <span className="mt-2 mx-auto block w-[85%] bg-ink text-butter text-center display py-1 text-sm tracking-widest">PENNY · {c.id}</span>
-              <span className="block text-center text-xs mt-1.5 leading-tight">Charge: {c.charge}</span>
+              <span className="block text-center text-xs mt-1.5 leading-tight min-h-[2rem]">Charge: {c.charge}</span>
             </button>
           </li>
         ))}
