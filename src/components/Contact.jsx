@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Icon } from "./Icons";
 
 // Contact: a postcard to the agency. Fill it in and "post" it; the card flies off and we confirm.
-export default function Contact() {
+export default function Contact({ className = "" }) {
   const [sent, setSent] = useState(false);
 
   // For now this only plays the animation. Nothing is sent anywhere until a backend is added.
@@ -14,7 +14,7 @@ export default function Contact() {
 
   const field = "w-full bg-transparent border-b-[3px] border-dashed border-ink/50 focus:border-red outline-none py-1 font-semibold";
   return (
-    <section id="contact" className="py-24 px-5 bg-orange">
+    <section id="contact" className={`py-24 px-5 bg-orange ${className}`}>
       <div className="mx-auto max-w-4xl">
         <h2 className="text-4xl sm:text-6xl text-paper text-center">Send us a <span className="text-yellow">postcard</span></h2>
         <p className="text-paper text-center mt-3">Tell us about your project. We read every card (while sipping coffee).</p>

@@ -34,3 +34,7 @@ export const serviceExtras = [
   { key: "creative", photo: "/images/services/creative.jpg", points: ["Campaign concepts", "Ad creative", "Social visuals"] },
   { key: "content", photo: "/images/services/content.jpg", points: ["Social content", "Copywriting", "Video and reels"] },
 ];
+
+// The nine chapters of the site in the client's order: id on the page and the short name shown in menus.
+export const chapters = [["top", "Founder"], ["founder", "About"], ["ideology", "Ideology"], ["remote", "Remote"], ["criminals", "Criminals"], ["licence", "Licence"], ["rules", "Rules"], ["services", "Services"], ["contact", "Contact"]];
+

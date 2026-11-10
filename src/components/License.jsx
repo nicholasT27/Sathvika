@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Icon } from "./Icons";
 
 // Creative License: a driver's-licence style card for the agency. Press the button to stamp it "approved".
-export default function License() {
+export default function License({ className = "" }) {
   const [stamped, setStamped] = useState(false);
   return (
-    <section className="py-24 px-5 bg-yellow">
+    <section id="licence" className={`py-24 px-5 bg-yellow ${className}`}>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl sm:text-6xl">Licensed to <span className="text-red">create</span></h2>
         <p className="mt-3">Every creative needs paperwork. Ours is fully (un)official.</p>

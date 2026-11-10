@@ -6,9 +6,9 @@ const points = ["Weekly check-in calls", "Shared project boards", "Replies withi
 
 // The Remote section: words on the left, one arch door on the right. Turn the knob and the door opens to a computer on a desk.
 // "bg" sets the band colour, and "headClass" / "headStyle" let each page keep its own heading look.
-export default function RemoteSection({ bg = "bg-sky", headClass = "text-red", headStyle }) {
+export default function RemoteSection({ bg = "bg-sky", headClass = "text-red", headStyle, className = "" }) {
   return (
-    <section id="remote" className={`${bg} px-5 py-20 sm:py-28 overflow-hidden`}>
+    <section id="remote" className={`${bg} px-5 py-20 sm:py-28 overflow-hidden ${className}`}>
       <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-6 items-center">
         <Reveal anim="left" className="text-center md:text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red">Remote, but never distant</p>
