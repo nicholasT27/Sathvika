@@ -10,7 +10,7 @@ const num = (i) => String(i + 1).padStart(2, "0");
 // A photo in an arch-shaped window that cross-fades to the active belief's picture.
 export function ArchPhoto({ active, className = "", frame = "border-ink shadow-[8px_8px_0_rgba(106,58,51,0.35)]" }) {
   return (
-    <div className={`relative aspect-[3/4] rounded-t-[999px] overflow-hidden border-[5px] ${frame} ${className}`}>
+    <div className={`relative aspect-[3/4] rounded-[1.75rem] overflow-hidden border-[5px] ${frame} ${className}`}>
       {photos.map((p, i) => <div key={p.src} role="img" aria-label={p.alt} aria-hidden={active !== i} className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${active === i ? "opacity-100 scale-100" : "opacity-0 scale-110"}`} style={{ backgroundImage: `url(${p.src})` }} />)}
       <span className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-paper text-ink text-[11px] font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full whitespace-nowrap">{photos[active].note}</span>
     </div>
@@ -57,7 +57,7 @@ export function TripleStage() {
         {slots.map((idx, s) => {
           const mid = s === 1;
           return (
-            <button key={idx} onClick={() => setActive(idx)} aria-label={beliefs[idx][0]} className={`relative shrink-0 aspect-[3/4] rounded-t-[999px] overflow-hidden border-[4px] border-ink transition-all duration-700 bg-cover bg-center ${mid ? "w-[44%] sm:w-64 shadow-[8px_8px_0_rgba(106,58,51,0.35)]" : "w-[24%] sm:w-36 opacity-60 hover:opacity-90"}`} style={{ backgroundImage: `url(${photos[idx].src})` }} role="img">
+            <button key={idx} onClick={() => setActive(idx)} aria-label={beliefs[idx][0]} className={`relative shrink-0 aspect-[3/4] rounded-[1.75rem] overflow-hidden border-[4px] border-ink transition-all duration-700 bg-cover bg-center ${mid ? "w-[44%] sm:w-64 shadow-[8px_8px_0_rgba(106,58,51,0.35)]" : "w-[24%] sm:w-36 opacity-60 hover:opacity-90"}`} style={{ backgroundImage: `url(${photos[idx].src})` }} role="img">
               <span className={`absolute inset-x-0 bottom-0 bg-ink/75 text-butter py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em] ${mid ? "" : "hidden sm:block"}`}>{num(idx)}{mid ? ` · ${photos[idx].note}` : ""}</span>
             </button>
           );

@@ -11,7 +11,7 @@ export function FounderOnly({ bold = false, className = "" }) {
             <p className="mt-6 text-lg">Your newest brand partner and favourite part of the marketing process. I started this agency because brands deserve better than copy-paste creativity.</p>
             <p className="mt-3 text-lg">I combine strategy, design and performance thinking, with a slightly unreasonable amount of coffee. We&apos;re a small team on purpose, so when you work with us, you work with me.</p>
           </div>
-          <div className="order-1 md:order-2"><div role="img" aria-label="A creative team planning a campaign" className="aspect-[4/5] rounded-t-[999px] bg-cover bg-center" style={{ backgroundImage: "url(/images/team.jpg)" }} /></div>
+          <div className="order-1 md:order-2"><div role="img" aria-label="A creative team planning a campaign" className="aspect-[4/5] rounded-[2rem] border-[3px] border-ink shadow-[8px_8px_0_rgba(106,58,51,0.3)] bg-cover bg-center" style={{ backgroundImage: "url(/images/team.jpg)" }} /></div>
         </div>
       </section>
   );

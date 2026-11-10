@@ -58,7 +58,7 @@ export function Stage() {
           <h2 key={active} aria-label={beliefs[active][0]} className="display text-5xl sm:text-7xl leading-[1.02] text-ink in-view"><span aria-hidden="true"><Letters text={beliefs[active][0]} /></span></h2>
           <p key={`d${active}`} className="mt-6 text-lg max-w-md slide-up-flat">{beliefs[active][1]}</p>
         </div>
-        <div className="relative mx-auto w-full max-w-xs aspect-[3/4] rounded-t-[999px] overflow-hidden border-[5px] border-ink shadow-[8px_8px_0_rgba(106,58,51,0.35)]">
+        <div className="relative mx-auto w-full max-w-xs aspect-[3/4] rounded-[1.75rem] overflow-hidden border-[5px] border-ink shadow-[8px_8px_0_rgba(106,58,51,0.35)]">
           {photos.map((p, i) => <div key={p.src} role="img" aria-label={p.alt} aria-hidden={active !== i} className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${active === i ? "opacity-100 scale-100" : "opacity-0 scale-110"}`} style={{ backgroundImage: `url(${p.src})` }} />)}
           <span className="absolute left-1/2 -translate-x-1/2 bottom-4 bg-paper text-ink text-[11px] font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full whitespace-nowrap">{photos[active].note}</span>
         </div>

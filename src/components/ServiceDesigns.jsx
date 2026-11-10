@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import useRotator from "./useRotator";
 import { Icon } from "./Icons";
 import Mascot from "./Mascot";
 import { services, serviceExtras } from "@/data/content";
@@ -46,10 +45,10 @@ const pennyQuips = ["Looks good, doesn't it?", "Numbers never lie. Mostly.", "Pi
 
 // Design 2, "Book": an open book. The contents are on the left page, and the right page turns to each service in turn.
 export function BookServices() {
-  const { active, setActive, ref, hoverProps } = useRotator(items.length, 6000);
+  const [active, setActive] = useState(0);
   const s = items[active];
   return (
-    <div ref={ref} {...hoverProps} className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-5xl">
       <div className="text-center"><p className={eyebrow}>The services book</p><h2 className="mt-3 text-4xl sm:text-6xl text-red">What we do</h2></div>
       <div className="relative mt-12 grid md:grid-cols-2 bg-[#fffaf0] rounded-2xl border-[3px] border-ink shadow-[0_22px_44px_rgba(106,58,51,0.3),12px_12px_0_rgba(106,58,51,0.25)]">
         <span className="hidden md:block absolute left-1/2 top-0 bottom-0 w-10 -translate-x-1/2 pointer-events-none" style={{ background: "linear-gradient(90deg, transparent, rgba(106,58,51,0.2) 48%, rgba(106,58,51,0.35) 50%, rgba(106,58,51,0.2) 52%, transparent)" }} aria-hidden="true" />
@@ -67,7 +66,7 @@ export function BookServices() {
               </li>
             ))}
           </ol>
-          <p className="mt-8 inline-block rotate-[-3deg] bg-yellow border-2 border-ink px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em]">★ Turn the page ★</p>
+          <p className="mt-8 inline-block rotate-[-3deg] bg-yellow border-2 border-ink px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em]">★ Click a chapter to turn the page ★</p>
         </div>
         <div key={active} className="page-in p-6 sm:p-10">
           <div className="flex items-start justify-between gap-3">
