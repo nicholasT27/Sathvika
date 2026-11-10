@@ -6,6 +6,7 @@ const options = [
   ["/designs/summit-cascade", "Hero · Cascade (new)", "Calm look. Four founder photos step down a staircase, overlapping and slanted, like the Wayo Girl reference.", "bg-sky"],
   ["/designs/summit-quad", "Hero · Quad (new)", "Bold look. Four pastel squares (blue, mint, pink, yellow), each with a flower-framed photo and a headline card in the middle.", "bg-yellow"],
   ["/designs/summit-row", "Hero · Row (new)", "Bold look. Headline and button on top, then four tilted rounded cards in a row that lift on hover.", "bg-orange"],
+  ["/designs/flow", "Founder to ideology flow · 3 fixes (new)", "Three ways to connect the founder section and the ideology section: checks fade, one band with matching boxes, and a ribbon handover.", "bg-sky"],
   ["/designs/ideology-interactive", "Ideology · Design C, interactive (new)", "Pick a belief and the photo swaps, with new photos for each.", "bg-orange"],
   ["/designs/ideology-box", "Ideology · Split panel in a box, slanted title (new)", "Three designs: the split panel inside the rounded box on thick checks, with a slanted ribbon title.", "bg-yellow"],
   ["/designs/ideology-mix", "Ideology · Mixed designs 2 + 3 (new)", "Three hybrids of the split panel and the box on checks: checks half with a box, a checks-framed box on the seam, and a split intro over four boxes on checks.", "bg-orange"],
