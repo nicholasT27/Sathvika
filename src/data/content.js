@@ -24,3 +24,13 @@ export const ideologyPhotos = [
   { src: "/images/cheers.jpg", alt: "Two coffee cups clinking over a cafe table", note: "People talking to people" },
   { src: "/images/latte.jpg", alt: "Latte art on a cafe table with plants", note: "Finishing touches matter" },
 ];
+
+// Photo and bullet points for each service, in the same order as "services" above.
+export const serviceExtras = [
+  { key: "branding", photo: "/images/services/branding.jpg", points: ["Logo and visual identity", "Brand guidelines", "Tone of voice"] },
+  { key: "performance", photo: "/images/services/performance.jpg", points: ["Paid social and search", "Conversion tracking", "Monthly reporting"] },
+  { key: "website", photo: "/images/services/website.jpg", points: ["UX and UI design", "Landing pages", "Speed and SEO basics"] },
+  { key: "strategy", photo: "/images/services/strategy.jpg", points: ["Audience research", "Positioning", "Channel planning"] },
+  { key: "creative", photo: "/images/services/creative.jpg", points: ["Campaign concepts", "Ad creative", "Social visuals"] },
+  { key: "content", photo: "/images/services/content.jpg", points: ["Social content", "Copywriting", "Video and reels"] },
+];

@@ -136,3 +136,10 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
 @keyframes slideUpFlat { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .slide-up-flat { animation: slideUpFlat 0.5s ease-out both; }
 @media (prefers-reduced-motion: reduce) { .slide-up-flat { animation: none; } }
+
+/* Book pages turn in from the spine; coupons pop when clipped. */
+@keyframes pageIn { from { opacity: 0; transform: perspective(1400px) rotateY(-70deg); } to { opacity: 1; transform: none; } }
+.page-in { animation: pageIn 0.75s ease-out both; transform-origin: left center; }
+@keyframes clipPop { 0% { transform: scale(1) rotate(0); } 40% { transform: scale(1.06) rotate(-2deg); } 100% { transform: scale(1) rotate(-1.5deg); } }
+.clip-pop { animation: clipPop 0.5s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .page-in, .clip-pop { animation: none; } }
