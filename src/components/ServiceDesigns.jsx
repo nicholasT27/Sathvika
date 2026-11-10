@@ -80,9 +80,9 @@ export function BookServices() {
           <p className="mt-6 text-right text-sm text-ink/60">— {active + 1} —</p>
         </div>
         {/* Penny sits beside the book on wide screens and under it on phones */}
-        <div className="md:absolute md:-right-24 lg:-right-28 md:bottom-2 z-20 flex md:block justify-center items-end gap-3 pb-4 md:pb-0 col-span-full">
-          <p key={`q${active}`} className="relative slide-up-flat bg-white border-[3px] border-ink rounded-2xl px-3 py-2 text-sm font-semibold max-w-[10rem] mb-2 md:mb-2 md:-ml-6 shadow-[3px_3px_0_var(--ink)]">{pennyQuips[active]}</p>
-          <div className="w-24 md:w-28 bob"><Mascot mood={pennyMoods[active]} steam={false} className="w-full" /></div>
+        <div className="xl:absolute xl:-right-24 xl:bottom-2 z-20 flex xl:block justify-center items-end gap-3 pb-4 xl:pb-0 col-span-full">
+          <p key={`q${active}`} className="relative slide-up-flat bg-white border-[3px] border-ink rounded-2xl px-3 py-2 text-sm font-semibold max-w-[10rem] mb-2 xl:-ml-6 shadow-[3px_3px_0_var(--ink)]">{pennyQuips[active]}</p>
+          <div className="w-24 xl:w-28 bob"><Mascot mood={pennyMoods[active]} steam={false} className="w-full" /></div>
         </div>
       </div>
     </div>

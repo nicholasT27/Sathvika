@@ -8,9 +8,10 @@ import { Icon } from "./Icons";
 import { rules } from "./Rules";
 import ComboSection from "./ComboSection";
 import FlowLead from "./FlowLead";
+import { BookServices } from "./ServiceDesigns";
 import { NightStage } from "./IdeologyStages";
 import { FanHero, CascadeHero, QuadHero, RowHero } from "./HeroVariants";
-import { beliefs, services, tickerWords } from "@/data/content";
+import { tickerWords } from "@/data/content";
 
 // Two looks for the same layout. "calm" is quiet and elegant; "bold" is louder and more playful.
 const themes = {
@@ -107,26 +108,9 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
         </div>
       </section>
 
-      {/* 8. Services: editorial list with a photo */}
-      <section id="services" className={`${t.bandL} px-5 py-24`}>
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-[0.9fr_1.3fr] gap-12">
-          <Reveal anim="left">
-            <h2 style={hs} className={`text-3xl sm:text-5xl !text-ink ${t.head}`}>Services</h2>
-            <p className="mt-4 max-w-sm">Everything your brand needs to grow, from the first logo to the last conversion.</p>
-            <div role="img" aria-label="A bright open-plan workspace with plants and a long window" className={`${photo} mt-8 aspect-[3/2]`} style={{ backgroundImage: "url(/images/window-desk.jpg)" }} />
-          </Reveal>
-          <ul className="divide-y divide-ink/25">
-            {services.map((s, n) => (
-              <Reveal key={s.name} anim="right" delay={0.07 * n}>
-                <li className="py-5 flex items-center gap-5 group">
-                  <span className="w-14 h-14 shrink-0 rounded-full bg-paper grid place-items-center text-red"><Icon name={s.icon} className="w-8 h-8" /></span>
-                  <div className="flex-1"><h3 style={hs} className={`${theme === "bold" ? "display text-xl" : "font-semibold uppercase tracking-[0.12em]"} text-ink`}>{s.name}</h3><p className="text-sm mt-0.5">{s.line}</p></div>
-                  <a href="#contact" className="text-xl group-hover:translate-x-1 transition" aria-label={`Ask about ${s.name}`}>→</a>
-                </li>
-              </Reveal>
-            ))}
-          </ul>
-        </div>
+      {/* 8. Services: an open book you page through, with the mascot on the side */}
+      <section id="services" className={`${t.bandL} px-5 py-24 sm:py-28`}>
+        <Reveal anim="rise"><BookServices /></Reveal>
       </section>
 
       {/* 9. Contact */}
