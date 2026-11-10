@@ -6,7 +6,7 @@ const DURATION = 4500;
 const bar = (key, dur = DURATION) => <span key={key} className="fill-bar absolute left-0 bottom-0 h-1 w-full bg-red" style={{ "--dur": `${dur}ms` }} aria-hidden="true" />;
 
 // Splits text into letters so each one can drop in. Letters stay grouped by word so a line never breaks inside a word.
-function Letters({ text }) {
+export function Letters({ text }) {
   let n = 0;
   return <>{text.split(" ").map((word, w) => (
     <span key={w} className="inline-block whitespace-nowrap">
