@@ -151,17 +151,38 @@ const waveColors = ["var(--yellow)", "var(--butter)", "#22344f", "var(--sky)", "
 // Layout I: the colours step into each other through checks dividers, with a small progress ring that follows you.
 export function WavesLayout() {
   const active = useActiveChapter(null);
+  const [menu, setMenu] = useState(false);
   const els = chapterElements(false, false);
   const r = 18, c = 2 * Math.PI * r;
   return (
     <main className="soft bg-paper overflow-x-clip">
       <ScrollBar />
-      <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
-        <div className="mx-auto max-w-6xl flex items-center justify-between gap-4 px-5 py-2.5">
+      <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-ink/15">
+        <div className="mx-auto max-w-6xl flex items-center justify-between gap-3 px-5 py-2.5">
           <a href="#top" className="display text-xl text-red">Sathvika<span className="text-blue">*</span></a>
           <ul className="hidden lg:flex gap-4">{chapters.slice(1, 8).map(([id, n], i) => <li key={id}><a href={`#${id}`} className={`${small} ${active === i + 1 ? "text-red underline underline-offset-8" : "hover:text-red"}`}>{n}</a></li>)}</ul>
-          <a href="#contact" className="btn bg-red text-paper !py-1.5 !px-4 text-xs">Start a project</a>
+          <div className="flex items-center gap-2">
+            <a href="#contact" className="btn bg-red text-paper !py-1.5 !px-4 text-xs">Start a project</a>
+            <button onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="site-menu" aria-label={menu ? "Close menu" : "Open menu"} className="lg:hidden w-10 h-10 rounded-full border-[3px] border-ink bg-paper grid place-items-center">
+              <span className="relative block w-4 h-3" aria-hidden="true">
+                <span className={`absolute left-0 right-0 h-[2px] bg-ink transition-all ${menu ? "top-1/2 rotate-45" : "top-0"}`} />
+                <span className={`absolute left-0 right-0 top-1/2 h-[2px] bg-ink transition-opacity ${menu ? "opacity-0" : ""}`} />
+                <span className={`absolute left-0 right-0 h-[2px] bg-ink transition-all ${menu ? "top-1/2 -rotate-45" : "bottom-0"}`} />
+              </span>
+            </button>
+          </div>
         </div>
+        {menu && (
+          <nav id="site-menu" aria-label="Chapters" className="lg:hidden border-t border-ink/15 bg-paper max-h-[75vh] overflow-y-auto">
+            <ul className="mx-auto max-w-6xl px-5 py-3 grid sm:grid-cols-2 gap-x-8">
+              {chapters.map(([id, n], i) => (
+                <li key={id}><a href={`#${id}`} onClick={() => setMenu(false)} className={`flex items-baseline gap-3 py-3 border-b border-ink/10 ${active === i ? "text-red" : ""}`}>
+                  <span className="display text-lg w-8">{String(i + 1).padStart(2, "0")}</span><span className={`${small} ${active === i ? "font-bold" : ""}`}>{n}</span>
+                </a></li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </header>
       {els.map((e, i) => (
         <div key={i}>
