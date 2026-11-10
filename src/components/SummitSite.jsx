@@ -1,7 +1,7 @@
 import ScrollBar from "./ScrollBar";
 import Reveal from "./Reveal";
 import RemoteSection from "./RemoteSection";
-import CriminalsLine from "./CriminalsLine";
+import { LineupCriminals } from "./CriminalsDesigns";
 import License from "./License";
 import Contact from "./Contact";
 import { Icon } from "./Icons";
@@ -90,7 +90,7 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
       <RemoteSection bg={theme === "calm" ? "bg-sky" : "bg-blue"} headStyle={hs} headClass={t.head} />
 
       {/* 5 and 6. Creative criminals and the creative licence */}
-      <Reveal anim="flipx"><CriminalsLine /></Reveal>
+      <section id="criminals" className="bg-[#2a1613] px-5 py-20 sm:py-28 overflow-hidden"><Reveal anim="rise"><LineupCriminals /></Reveal></section>
       <Reveal anim="rise"><License /></Reveal>
 
       {/* 7. Our very official, unofficial rules */}
