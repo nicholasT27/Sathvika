@@ -6,6 +6,8 @@ import License from "./License";
 import Contact from "./Contact";
 import { Icon } from "./Icons";
 import { rules } from "./Rules";
+import ComboSection from "./ComboSection";
+import IdeologyInteractive from "./IdeologyInteractive";
 import { FanHero, CascadeHero, QuadHero, RowHero } from "./HeroVariants";
 import { beliefs, services, tickerWords } from "@/data/content";
 
@@ -89,27 +91,12 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
         </div>
       </section>
 
-      {/* 3. Our ideology: two-tone split panel */}
-      <section id="ideology" className="grid md:grid-cols-2">
-        <div className={`${t.bandL} px-6 sm:px-14 py-20 flex items-center`}>
-          <Reveal anim="left">
-            <h2 style={hs} className={`text-3xl sm:text-5xl leading-[1.2] ${t.head} ${theme === "bold" ? "!text-ink" : "!text-ink"}`}>Our ideology.<br />Ideas are in<br />the details.</h2>
-            <p className="mt-6 max-w-sm">Four beliefs sit behind every campaign, website and brand we make. We&apos;d love to share how they shape your next project.</p>
-            <p className="mt-6 flex gap-8"><a href="#services" className={`${small} underline underline-offset-8`}>Services</a><a href="#rules" className={`${small} underline underline-offset-8`}>Rules</a></p>
-          </Reveal>
-        </div>
-        <div className={`${t.bandR} relative px-6 sm:px-14 py-20`}>
-          <Seal text="MADE WITH COFFEE · CREATIVE MARKETING · EST 2026 ·" className="absolute right-6 top-6 text-red hidden sm:block rotate-12" />
-          <ol className="divide-y divide-ink/20 mt-4 sm:mt-14">
-            {beliefs.map(([h, d], i) => (
-              <Reveal key={h} anim="right" delay={0.1 * i}>
-                <li className="py-5"><h3 style={hs} className={`${theme === "bold" ? "display text-xl" : "font-semibold uppercase tracking-[0.1em]"} text-ink`}>{h}</h3><p className="mt-1 text-sm">{d}</p></li>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-        <span className="hidden md:grid absolute left-1/2 -translate-x-1/2 mt-24 w-20 h-20 rounded-full bg-paper place-items-center text-red shadow-md"><Icon name="ads" className="w-11 h-11" /></span>
-      </section>
+      {/* 3. Our ideology: box on thick checks that rotates through the beliefs by itself */}
+      <ComboSection start="blue" switcher={false}>
+        <section id="ideology" className="checks px-4 sm:px-14 py-24 sm:py-32 overflow-hidden">
+          <Reveal anim="flip"><IdeologyInteractive /></Reveal>
+        </section>
+      </ComboSection>
 
       {/* 4. Remote */}
       <RemoteSection bg={theme === "calm" ? "bg-sky" : "bg-blue"} headStyle={hs} headClass={t.head} />

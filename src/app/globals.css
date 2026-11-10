@@ -118,3 +118,18 @@ h1, h2, h3, .display { font-family: var(--font-titan), sans-serif; font-weight: 
   .rv[data-ready="1"]:not(.in) { opacity: 1; transform: none; clip-path: none; }
   .swing { animation: none; }
 }
+
+/* Ideology title: letters drop in one by one, the ribbon wobbles, and the bottom ribbon slides up on each change. */
+@keyframes letterDrop { 0% { opacity: 0; transform: translateY(-1.4em) rotate(-18deg) scale(0.6); } 65% { opacity: 1; transform: translateY(0.12em) rotate(4deg) scale(1.05); } 100% { opacity: 1; transform: none; } }
+.letter { display: inline-block; opacity: 0; }
+.in-view .letter { animation: letterDrop 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards; animation-delay: calc(var(--i) * 55ms + 250ms); }
+@keyframes wobble { 0%, 100% { transform: rotate(3deg); } 50% { transform: rotate(1deg) translateY(-3px); } }
+.in-view .wobble { animation: wobble 4.5s ease-in-out 1.6s infinite; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(14px) rotate(-2deg); } to { opacity: 1; transform: translateY(0) rotate(-2deg); } }
+.slide-up { animation: slideUp 0.5s ease-out both; }
+@keyframes fillBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.fill-bar { transform-origin: left; animation: fillBar var(--dur, 4500ms) linear forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .letter { opacity: 1; }
+  .in-view .letter, .in-view .wobble, .slide-up, .fill-bar { animation: none; }
+}
