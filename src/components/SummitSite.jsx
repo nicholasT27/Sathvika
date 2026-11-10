@@ -7,7 +7,8 @@ import Contact from "./Contact";
 import { Icon } from "./Icons";
 import { rules } from "./Rules";
 import ComboSection from "./ComboSection";
-import IdeologyInteractive from "./IdeologyInteractive";
+import FlowLead from "./FlowLead";
+import { NightStage } from "./IdeologyStages";
 import { FanHero, CascadeHero, QuadHero, RowHero } from "./HeroVariants";
 import { beliefs, services, tickerWords } from "@/data/content";
 
@@ -74,27 +75,13 @@ export default function SummitSite({ theme = "calm", hero = "fan" }) {
         <div className="marquee py-3">{[...tickerWords, ...tickerWords, ...tickerWords].map((w, i) => <span key={i} className={`${small} mx-6`}>{w} <span className="text-red">·</span></span>)}</div>
       </div>
 
-      {/* 2. Introduction of the founder: arch photo, heading overlapping it, pattern borders */}
-      <section id="founder" className="relative px-5 py-24">
-        <div className="checks absolute left-0 top-0 bottom-0 w-6 sm:w-12" style={t.pat} aria-hidden="true" />
-        <div className="checks absolute right-0 top-0 bottom-0 w-6 sm:w-12" style={t.pat} aria-hidden="true" />
-        <div className="mx-auto max-w-5xl grid md:grid-cols-[0.9fr_1.2fr] gap-10 items-center">
-          <Reveal anim="flip">
-            <div role="img" aria-label="A creative team planning a campaign" className="aspect-[4/5] rounded-t-[999px] bg-cover bg-center" style={{ backgroundImage: "url(/images/team.jpg)" }} />
-          </Reveal>
-          <Reveal anim="left">
-            <h2 style={hs} className={`text-4xl sm:text-6xl md:-ml-28 relative ${t.head}`}>Hi, I&apos;m Sathvika.</h2>
-            <p className="mt-6 text-lg">Your newest brand partner and favourite part of the marketing process. I started this agency because brands deserve better than copy-paste creativity.</p>
-            <p className="mt-3 text-lg">I combine strategy, design and performance thinking, with a slightly unreasonable amount of coffee. We&apos;re a small team on purpose, so when you work with us, you work with me.</p>
-            <a href="#contact" className={`${small} inline-block mt-6 underline underline-offset-8`}>Work with us</a>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 3. Our ideology: box on thick checks that rotates through the beliefs by itself */}
+      {/* 2 and 3. Introduction of the founder, a red ribbon handover, then our ideology on the night stage that rotates through the beliefs */}
       <ComboSection start="blue" switcher={false}>
-        <section id="ideology" className="checks px-4 sm:px-14 py-24 sm:py-32 overflow-hidden">
-          <Reveal anim="flip"><IdeologyInteractive /></Reveal>
+        <FlowLead bold={theme === "bold"} />
+        <section id="ideology" className="bg-[#2a1613] relative">
+          <div className="checks h-8 sm:h-12 mt-8 sm:mt-10" aria-hidden="true" />
+          <div className="px-5 sm:px-14 py-16 sm:py-24 overflow-hidden"><Reveal anim="rise"><NightStage /></Reveal></div>
+          <div className="checks h-8 sm:h-12" aria-hidden="true" />
         </section>
       </ComboSection>
 

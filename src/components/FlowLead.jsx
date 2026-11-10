@@ -1,13 +1,13 @@
 const heading = { fontFamily: "var(--font-outfit), sans-serif", fontWeight: 600 };
 
 // The founder section and the red ribbon from flow design C, repeated above each ideology design so the match is easy to judge.
-export default function FlowLead() {
+export default function FlowLead({ bold = false }) {
   return (
     <>
       <section id="founder" className="relative px-5 pt-20 pb-24 bg-butter">
         <div className="mx-auto max-w-5xl grid md:grid-cols-[1.2fr_0.9fr] gap-10 items-center">
           <div className="order-2 md:order-1">
-            <h2 style={heading} className="text-4xl sm:text-6xl text-red">Hi, I&apos;m Sathvika.</h2>
+            <h2 style={bold ? undefined : heading} className="text-4xl sm:text-6xl text-red">Hi, I&apos;m Sathvika.</h2>
             <p className="mt-6 text-lg">Your newest brand partner and favourite part of the marketing process. I started this agency because brands deserve better than copy-paste creativity.</p>
             <p className="mt-3 text-lg">I combine strategy, design and performance thinking, with a slightly unreasonable amount of coffee. We&apos;re a small team on purpose, so when you work with us, you work with me.</p>
           </div>
